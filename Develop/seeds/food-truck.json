@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Los Tacos Locos",
+        "cuisine": "Mexican",
+        "description": "Authentic tacos made with fresh ingredients.",
+        "image": "https://example.com/taco-truck.jpg",
+        "contact_info": "123-456-7890",
+        "social_media_links": {
+            "twitter": "https://twitter.com/taco_truck",
+            "facebook": "https://facebook.com/taco_truck",
+            "instagram": "https://instagram.com/taco_truck"
+        }
+    },
+    {
+        "name": "The Pizza Wagon",
+        "cuisine": "Italian",
+        "description": "Delicious wood-fired pizzas made to order.",
+        "image": "https://example.com/pizza-truck.jpg",
+        "contact_info": "123-456-7890",
+        "social_media_links": {
+            "twitter": "https://twitter.com/pizza_truck",
+            "facebook": "https://facebook.com/pizza_truck",
+            "instagram": "https://instagram.com/pizza_truck"
+        }
+    },
+    {
+        "name": "Burgers on Wheels",
+        "cuisine": "American",
+        "description": "Juicy burgers and fries cooked to perfection.",
+        "image": "https://example.com/burger-truck.jpg",
+        "contact_info": "123-456-7890",
+        "social_media_links": {
+            "twitter": "https://twitter.com/burger_truck",
+            "facebook": "https://facebook.com/burger_truck",
+            "instagram": "https://instagram.com/burger_truck"
+        }
+    },
+    {
+        "name": "Rolling Sushi",
+        "cuisine": "Japanese",
+        "description": "Fresh sushi rolls made to order.",
+        "image": "https://example.com/sushi-truck.jpg",
+        "contact_info": "123-456-7890",
+        "social_media_links": {
+            "twitter": "https://twitter.com/sushi_truck",
+            "facebook": "https://facebook.com/sushi_truck",
+            "instagram": "https://instagram.com/sushi_truck"
+        }
+    },
+    {
+        "name": "Smokin' Wheels BBQ",
+        "cuisine": "American",
+        "description": "Slow-cooked meats and classic sides.",
+        "image": "https://example.com/bbq-truck.jpg",
+        "contact_info": "123-456-7890",
+        "social_media_links": {
+            "twitter": "https://twitter.com/bbq_truck",
+            "facebook": "https://facebook.com/bbq_truck",
+            "instagram": "https://instagram.com/bbq_truck"
+        }
+    },
+    {
+        "name": "Scoops on the Move",
+        "cuisine": "Dessert",
+        "description": "Handmade ice cream and frozen treats.",
+        "image": "https://example.com/ice-cream-truck.jpg",
+        "contact_info": "123-456-7890",
+        "social_media_links": {
+            "twitter": "https://twitter.com/ice_cream_truck",
+            "facebook": "https://facebook.com/ice_cream_truck",
+            "instagram": "https://instagram.com/ice_cream_truck"
+        }
+    },
+    {
+        "name": "Thai Street Kitchen",
+        "cuisine": "Thai",
+        "description": "Authentic Thai dishes served hot and fresh.",
+        "image": "https://example.com/thai-truck.jpg",
+        "contact_info": "123-456-7890",
+        "social_media_links": {
+            "twitter": "https://twitter.com/thai_truck",
+            "facebook": "https://facebook.com/thai_truck",
+            "instagram": "https://instagram.com/thai_truck"
+        }
+    },
+    {
+        "name": "Cluck Truck",
+        "cuisine": "American",
+        "description": "Crispy fried chicken and all the fixings.",
+        "image": "https://example.com/chicken-truck.jpg",
+        "contact_info": "123-456-7890",
+        "social_media_links": {
+            "twitter": "https://twitter.com/chicken_truck",
+            "facebook": "https://facebook.com/chicken_truck",
+            "instagram": "https://instagram.com/chicken_truck"
+        }
+    },
+    {
+        "name": "Veggie Wheels",
+        "cuisine": "Vegetarian",
+        "description": "Healthy and delicious vegetarian options.",
+        "image": "https://example.com/vegetarian-truck.jpg",
+        "contact_info": "123-456-7890",
+        "social_media_links": {
+            "twitter": "https://twitter.com/vegetarian_truck",
+            "facebook": "https://facebook.com/vegetarian_truck",
+            "instagram": "https://instagram.com/vegetarian_truck"
+        }
+    },
+    {
+        "name": "Mediterranean Bites on Wheels",
+        "cuisine": "Mediterranean",
+        "description": "Fresh and flavorful Mediterranean dishes.",
+        "image": "https://example.com/mediterranean-truck.jpg",
+        "contact_info": "123-456-7890",
+        "social_media_links": {
+            "twitter": "https://twitter.com/mediterranean_truck",
+            "facebook": "https://facebook.com/mediterranean_truck",
+            "instagram": "https://instagram.com/mediterranean_truck"
+        }
+    }
+]
