@@ -17,8 +17,12 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 // updating food truck - likely updating the food truck's location
-router.put('/', withAuth, async (req, res) => {
-
+router.put('/:id', withAuth, async (req, res) => {
+    try {
+        
+    } catch (err) {
+        res.status(400).json(err);
+    }
 });
 
 // deleting a food truck - OPTIONAL

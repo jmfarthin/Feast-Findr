@@ -10,8 +10,9 @@ router.post('/', withAuth, async (req, res) => {
 
             ...req.body,
             user_id: req.session.user_id,
-            // food_truck_id:
+            // food_truck_id: NOT NECESSARY
             // not sure how to handle the food_truck_id. Might need to use an Include
+            // handle through the request body
         });
 
         
@@ -20,13 +21,14 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
-// deleting a comment
+// deleting a comment - NOT NECESSARY TO IMPLEMENT - DO IF TIME ALLOWS
 router.delete('/:id', withAuth, async (req, res) => {
     try {
         const commentData = await Comment.destroy({
             where: {
                 id: req.params.id,
                 user_id: req.session.user_id,
+                
             },
         });
 
