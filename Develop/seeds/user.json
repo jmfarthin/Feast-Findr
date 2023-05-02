@@ -1,0 +1,62 @@
+[
+    {
+        "username": "john_doe",
+        "email": "john_doe@example.com",
+        "password": "password1",
+        "role": "owner"
+    },
+    {
+        "username": "jane_doe",
+        "email": "jane_doe@example.com",
+        "password": "password2",
+        "role": "owner"
+    },
+    {
+        "username": "bob_smith",
+        "email": "bob_smith@example.com",
+        "password": "password3",
+        "role": "user"
+    },
+    {
+        "username": "sarah_johnson",
+        "email": "sarah_johnson@example.com",
+        "password": "password4",
+        "role": "user"
+    },
+    {
+        "username": "jimmy_choo",
+        "email": "jimmy_choo@example.com",
+        "password": "password5",
+        "role": "user"
+    },
+    {
+        "username": "emily_smith",
+        "email": "emily_smith@example.com",
+        "password": "password6",
+        "role": "user"
+    },
+    {
+        "username": "adam_wilson",
+        "email": "adam_wilson@example.com",
+        "password": "password7",
+        "role": "user"
+    },
+    {
+        "username": "lisa_wong",
+        "email": "lisa_wong@example.com",
+        "password": "password8",
+        "role": "user"
+    },
+    {
+        "username": "jason_lee",
+        "email": "jason_lee@example.com",
+        "password": "password9",
+        "role": "user"
+    },
+    {
+        "username": "tina_nguyen",
+        "email": "tina_nguyen@example.com",
+        "password": "password10",
+        "role": "user"
+    }
+]
