@@ -11,7 +11,7 @@ FoodTruck.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        owner_id: {
+        owner_id: { // we could make a small change to the name of this class from "owner_id" to "user_id" to be a bit more simple
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
