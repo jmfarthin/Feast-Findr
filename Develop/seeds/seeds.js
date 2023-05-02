@@ -5,6 +5,7 @@ const { Comment, FoodTruck, User, Menu, MenuItem, Upvote } = require('../models'
 const commentData = require('./comments.json');
 const userData = require('./user.json');
 const foodTruckData = require('./food-truck.json');
+// const menuItems = require('./menu-item.json');
 
 
 const seedDB = async () => {
@@ -36,6 +37,14 @@ const seedDB = async () => {
                 food_truck_id: foodTrucks[Math.floor(Math.random() * foodTrucks.length)].id,
             });
         };
+
+        const truckIds = foodTrucks.map(truck => truck.id)
+
+        await Menu.bulkCreate(truckIds.map((truck_id) => {
+            return {
+                food_truck_id: truck_id
+            }
+        }));
 
 
 
