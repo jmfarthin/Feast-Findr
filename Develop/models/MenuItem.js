@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class MenuItem extends Model {}
+class MenuItem extends Model { }
 
 MenuItem.init(
     {
@@ -11,11 +11,11 @@ MenuItem.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        menu_id: {
+        food_truck_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'menu',
+                model: 'food_truck',
                 key: 'id',
             },
         },

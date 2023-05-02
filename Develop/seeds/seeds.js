@@ -43,19 +43,10 @@ const seedDB = async () => {
             });
         };
 
-        // seed menus
-        const truckIds = foodTrucks.map(truck => truck.id)
-
-        const menus = await Menu.bulkCreate(truckIds.map((truck_id) => {
-            return {
-                food_truck_id: truck_id
-            }
-        }));
-
 
         // seed menu items
         const itemsPerGroup = 7;
-        const menuIds = menus.map(menu => menu.id);
+        const foodTruckIds = foodTrucks.map(truck => truck.id)
         // Loop through the menu items and add the menu IDs
         let i = 0;
 
@@ -65,12 +56,12 @@ const seedDB = async () => {
             const groupIndex = i % itemsPerGroup;
 
             // Get the current menu ID
-            const menuId = menuIds[groupNum % menuIds.length];
+            const truckId = foodTruckIds[groupNum % foodTruckIds.length];
 
             // Add the menu ID to the current menu item
             await MenuItem.create({
                 ...item,
-                menu_id: menuId
+                food_truck_id: truckId
             });
             i++;
         };
