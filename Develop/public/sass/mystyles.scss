@@ -9,6 +9,29 @@ $red: #DD4533;
 $light-blue: #87EFD6;
 $dark-blue: #2A4D58;
 
+// Brand color classes here
+
+//Background colors
+.bg-burnt-orange { background-color: $burnt-orange; }
+.bg-orange { background-color: $orange; }
+.bg-red { background-color: $red; }
+.bg-light-blue { background-color: $light-blue; }
+.bg-dark-blue { background-color: $dark-blue; }
+
+// Text colors
+.text-burnt-orange { color: $burnt-orange; }
+.text-orange { color: $orange; }
+.text-red { color: $red; }
+.text-light-blue { color: $light-blue; }
+.text-dark-blue { color: $dark-blue; }
+
+// Border colors
+.border-burnt-orange { border-color: $burnt-orange; }
+.border-orange { border-color: $orange; }
+.border-red { border-color: $red; }
+.border-light-blue { border-color: $light-blue; }
+.border-dark-blue { border-color: $dark-blue; }
+
 // Bulma component variables
 $background-color: $dark-blue;
 $primary: $burnt-orange;
