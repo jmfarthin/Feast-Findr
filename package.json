@@ -1,0 +1,41 @@
+{
+  "name": "develope",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start watch": "npm run css-watch",
+    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "seed": "node Develop/seeds/seeds.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jmfarthin/project-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmfarthin/project-2/issues"
+  },
+  "homepage": "https://github.com/jmfarthin/project-2#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.6.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8",
+    "bulma": "^0.9.4",
+    "node-sass": "^8.0.0"
+  }
+}

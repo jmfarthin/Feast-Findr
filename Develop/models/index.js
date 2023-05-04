@@ -1,6 +1,5 @@
 const User = require('./User');
 const FoodTruck = require('./FoodTruck');
-const Menu = require('./Menu');
 const MenuItem = require('./MenuItem');
 const Upvote = require('./Upvote');
 const Comment = require('./Comment');
@@ -14,20 +13,12 @@ FoodTruck.belongsTo(User, {
     foreignKey: 'owner_id',
 });
 
-FoodTruck.hasMany(Menu, {
+FoodTruck.hasMany(MenuItem, {
     foreignKey: 'food_truck_id',
 });
 
-Menu.belongsTo(FoodTruck, {
+MenuItem.belongsTo(FoodTruck, {
     foreignKey: 'food_truck_id',
-});
-
-Menu.hasMany(MenuItem, {
-    foreignKey: 'menu_id',
-});
-
-MenuItem.belongsTo(Menu, {
-    foreignKey: 'menu_id',
 });
 
 User.belongsToMany(FoodTruck, {
@@ -61,7 +52,6 @@ Comment.belongsTo(FoodTruck, {
 module.exports = {
     User,
     FoodTruck,
-    Menu,
     MenuItem,
     Upvote,
     Comment,

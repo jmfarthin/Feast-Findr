@@ -1,0 +1,352 @@
+[
+    {
+        "name": "Classic Tacos",
+        "description": "Seasoned ground beef, shredded cheese, lettuce, and tomato in a crispy corn tortilla.",
+        "price": 3.00
+    },
+    {
+        "name": "Chicken Fajita Bowl",
+        "description": "Grilled chicken, bell peppers, onions, rice, and beans, topped with guacamole and sour cream.",
+        "price": 8.50
+    },
+    {
+        "name": "Veggie Burrito",
+        "description": "A large flour tortilla filled with grilled veggies, black beans, rice, and cheese.",
+        "price": 7.50
+    },
+    {
+        "name": "Carne Asada Quesadilla",
+        "description": "Marinated steak, cheese, and sautéed onions in a grilled flour tortilla, served with a side of pico de gallo.",
+        "price": 9.00
+    },
+    {
+        "name": "Nachos Supreme",
+        "description": "Crispy tortilla chips topped with ground beef, cheese, jalapeños, olives, and sour cream.",
+        "price": 7.00
+    },
+    {
+        "name": "Tres Leches Cake",
+        "description": "A moist sponge cake soaked in a mixture of three kinds of milk, topped with whipped cream.",
+        "price": 5.00
+    },
+    {
+        "name": "Horchata",
+        "description": "A refreshing, creamy rice and cinnamon drink.",
+        "price": 3.50
+    },
+    {
+        "name": "Margherita Pizza",
+        "description": "Fresh tomato sauce, mozzarella, basil, and a drizzle of olive oil.",
+        "price": 12.00
+    },
+    {
+        "name": "Pepperoni Pizza",
+        "description": "Classic pepperoni pizza with tomato sauce and mozzarella cheese.",
+        "price": 13.00
+    },
+    {
+        "name": "Veggie Pizza",
+        "description": "Tomato sauce, mozzarella, bell peppers, onions, mushrooms, olives, and tomatoes.",
+        "price": 14.00
+    },
+    {
+        "name": "Meat Lover's Pizza",
+        "description": "Tomato sauce, mozzarella, pepperoni, sausage, ham, and bacon.",
+        "price": 15.00
+    },
+    {
+        "name": "Chicken Alfredo Pizza",
+        "description": "Creamy Alfredo sauce, mozzarella, grilled chicken, and spinach.",
+        "price": 14.50
+    },
+    {
+        "name": "Tiramisu",
+        "description": "Classic Italian coffee-flavored dessert with layers of mascarpone and coffee-soaked ladyfingers.",
+        "price": 6.00
+    },
+    {
+        "name": "Limoncello Spritz",
+        "description": "A refreshing cocktail made with limoncello, prosecco, and soda water.",
+        "price": 7.50
+    },
+    {
+        "name": "Classic Cheeseburger",
+        "description": "A juicy beef patty with melted cheddar cheese, lettuce, tomato, and onion on a toasted bun.",
+        "price": 6.50
+    },
+    {
+        "name": "Bacon Avocado Burger",
+        "description": "A beef patty topped with crispy bacon, avocado, lettuce, and tomato on a toasted bun.",
+        "price": 8.00
+    },
+    {
+        "name": "BBQ Bacon Burger",
+        "description": "A beef patty with BBQ sauce, bacon, onion rings, and cheddar cheese on a toasted bun.",
+        "price": 8.50
+    },
+    {
+        "name": "Veggie Burger",
+        "description": "A flavorful veggie patty with lettuce, tomato, onion, and pickles on a toasted bun.",
+        "price": 7.00
+    },
+    {
+        "name": "Chicken Club Sandwich",
+        "description": "Grilled chicken breast, bacon, lettuce, tomato, and mayo on toasted bread.",
+        "price": 7.50
+    },
+    {
+        "name": "Apple Pie",
+        "description": "A slice of warm, flaky apple pie with a scoop of vanilla ice cream.",
+        "price": 5.00
+    },
+    {
+        "name": "Root Beer Float",
+        "description": "A classic mix of creamy vanilla ice cream and fizzy root beer.",
+        "price": 4.50
+    },
+    {
+        "name": "California Roll",
+        "description": "Crab, avocado, and cucumber wrapped in sushi rice and nori.",
+        "price": 6.00
+    },
+    {
+        "name": "Spicy Tuna Roll",
+        "description": "Fresh tuna mixed with spicy mayo, wrapped in sushi rice and nori.",
+        "price": 7.00
+    },
+    {
+        "name": "Dragon Roll",
+        "description": "Shrimp tempura, avocado, and cucumber topped with eel and eel sauce.",
+        "price": 10.00
+    },
+    {
+        "name": "Veggie Roll",
+        "description": "Avocado, cucumber, and carrot wrapped in sushi rice and nori.",
+        "price": 5.50
+    },
+    {
+        "name": "Sashimi Sampler",
+        "description": "An assortment of fresh, thinly sliced fish.",
+        "price": 12.00
+    },
+    {
+        "name": "Mochi Ice Cream",
+        "description": "A selection of traditional Japanese ice cream wrapped in a soft, chewy rice cake.",
+        "price": 4.00
+    },
+    {
+        "name": "Green Tea Lemonade",
+        "description": "A refreshing blend of green tea and lemonade with a hint of honey.",
+        "price": 4.50
+    },
+    {
+        "name": "Pulled Pork Sandwich",
+        "description": "Slow-cooked, tender pulled pork with tangy BBQ sauce on a toasted bun.",
+        "price": 8.00
+    },
+    {
+        "name": "Beef Brisket Plate",
+        "description": "Smoked beef brisket served with coleslaw, baked beans, and cornbread.",
+        "price": 12.00
+    },
+    {
+        "name": "BBQ Chicken",
+        "description": "A quarter of a BBQ chicken served with potato salad and a roll.",
+        "price": 10.00
+    },
+    {
+        "name": "Smoked Sausage",
+        "description": "A juicy smoked sausage link served with sauerkraut and mustard.",
+        "price": 7.50
+    },
+    {
+        "name": "BBQ Ribs",
+        "description": "A half-rack of tender, smoky ribs with a side of fries and coleslaw.",
+        "price": 15.00
+    },
+    {
+        "name": "Peach Cobbler",
+        "description": "A warm, gooey peach cobbler served with a scoop of vanilla ice cream.",
+        "price": 5.50
+    },
+    {
+        "name": "Sweet Tea",
+        "description": "A refreshing glass of classic Southern sweet tea.",
+        "price": 3.00
+    },
+    {
+        "name": "Vanilla Ice Cream",
+        "description": "A scoop of classic, creamy vanilla ice cream.",
+        "price": 3.50
+    },
+    {
+        "name": "Chocolate Ice Cream",
+        "description": "A scoop of rich, velvety chocolate ice cream.",
+        "price": 3.50
+    },
+    {
+        "name": "Strawberry Ice Cream",
+        "description": "A scoop of fruity, refreshing strawberry ice cream.",
+        "price": 3.50
+    },
+    {
+        "name": "Cookie Dough Ice Cream",
+        "description": "A scoop of vanilla ice cream with chunks of cookie dough.",
+        "price": 4.00
+    },
+    {
+        "name": "Mint Chocolate Chip Ice Cream",
+        "description": "A scoop of cool mint ice cream with chocolate chips.",
+        "price": 4.00
+    },
+    {
+        "name": "Banana Split",
+        "description": "A classic banana split with vanilla, chocolate, and strawberry ice cream, topped with whipped cream, nuts, and a cherry.",
+        "price": 7.00
+    },
+    {
+        "name": "Root Beer Float",
+        "description": "A classic mix of creamy vanilla ice cream and fizzy root beer.",
+        "price": 4.50
+    },
+    {
+        "name": "Pad Thai",
+        "description": "Stir-fried rice noodles with shrimp, tofu, peanuts, and bean sprouts in a tangy tamarind sauce.",
+        "price": 9.00
+    },
+    {
+        "name": "Green Curry",
+        "description": "Spicy green curry with chicken, bamboo shoots, and bell peppers, served with steamed jasmine rice.",
+        "price": 10.00
+    },
+    {
+        "name": "Tom Kha Gai",
+        "description": "A creamy coconut chicken soup with galangal, lemongrass, and kaffir lime leaves.",
+        "price": 6.00
+    },
+    {
+        "name": "Thai Basil Stir Fry",
+        "description": "Your choice of chicken, beef, or tofu stir-fried with Thai basil, bell peppers, and onions, served with steamed jasmine rice.",
+        "price": 9.50
+    },
+    {
+        "name": "Mango Sticky Rice",
+        "description": "Sweet, ripe mango served with warm, sticky rice, and drizzled with coconut cream.",
+        "price": 6.00
+    },
+    {
+        "name": "Thai Iced Tea",
+        "description": "A sweet and creamy blend of strong black tea, condensed milk, and ice.",
+        "price": 4.00
+    },
+    {
+        "name": "Red Curry",
+        "description": "Spicy red curry with chicken, bamboo shoots, and bell peppers, served with steamed jasmine rice.",
+        "price": 12.50
+    },
+    {
+        "name": "Fried Chicken Tenders",
+        "description": "Crispy, golden chicken tenders served with your choice of dipping sauce.",
+        "price": 7.00
+    },
+    {
+        "name": "Buffalo Chicken Wrap",
+        "description": "Spicy buffalo chicken, lettuce, and tomato wrapped in a flour tortilla, served with blue cheese dressing.",
+        "price": 8.00
+    },
+    {
+        "name": "Chicken and Waffles",
+        "description": "Golden waffles topped with crispy fried chicken and drizzled with maple syrup.",
+        "price": 10.00
+    },
+    {
+        "name": "Grilled Chicken Caesar Salad",
+        "description": "Grilled chicken breast on a bed of romaine lettuce, tossed with Caesar dressing, croutons, and Parmesan cheese.",
+        "price": 9.00
+    },
+    {
+        "name": "Classic Chicken Sandwich",
+        "description": "Grilled or fried chicken breast with lettuce, tomato, and mayo on a toasted bun.",
+        "price": 7.50
+    },
+    {
+        "name": "Chocolate Chip Cookie",
+        "description": "A warm, gooey chocolate chip cookie, perfect for dessert.",
+        "price": 2.00
+    },
+    {
+        "name": "Lemonade",
+        "description": "A refreshing glass of freshly-squeezed lemonade.",
+        "price": 3.50
+    },
+    {
+        "name": "Falafel Wrap",
+        "description": "Crispy falafel, lettuce, tomato, and cucumber wrapped in a soft pita, served with tahini sauce.",
+        "price": 7.50
+    },
+    {
+        "name": "Grilled Portobello Mushroom Burger",
+        "description": "A juicy, marinated portobello mushroom cap with lettuce, tomato, and onion on a toasted bun.",
+        "price": 8.00
+    },
+    {
+        "name": "Veggie Quinoa Bowl",
+        "description": "A hearty bowl of quinoa, roasted vegetables, and black beans, topped with avocado and a lemon-tahini dressing.",
+        "price": 9.00
+    },
+    {
+        "name": "Spinach and Feta Stuffed Pita",
+        "description": "A warm pita pocket filled with sautéed spinach and crumbled feta cheese.",
+        "price": 6.50
+    },
+    {
+        "name": "Caprese Salad",
+        "description": "Fresh mozzarella, tomatoes, basil, and a drizzle of balsamic glaze.",
+        "price": 7.00
+    },
+    {
+        "name": "Fruit Salad",
+        "description": "A refreshing bowl of mixed seasonal fruits.",
+        "price": 5.00
+    },
+    {
+        "name": "Iced Green Tea",
+        "description": "A cool, refreshing glass of iced green tea.",
+        "price": 3.50
+    },
+    {
+        "name": "Gyro Sandwich",
+        "description": "Sliced lamb and beef gyro meat wrapped in a warm pita with lettuce, tomato, onion, and tzatziki sauce.",
+        "price": 8.00
+    },
+    {
+        "name": "Chicken Shawarma Plate",
+        "description": "Marinated, grilled chicken served with rice, hummus, and a side salad.",
+        "price": 10.00
+    },
+    {
+        "name": "Greek Salad",
+        "description": "Crisp lettuce, tomatoes, cucumbers, olives, feta cheese, and a Greek vinaigrette.",
+        "price": 7.50
+    },
+    {
+        "name": "Hummus and Pita",
+        "description": "Creamy, house-made hummus served with warm pita bread.",
+        "price": 6.00
+    },
+    {
+        "name": "Stuffed Grape Leaves",
+        "description": "Grape leaves filled with a mixture of rice, herbs, and spices, served with tzatziki sauce.",
+        "price": 7.00
+    },
+    {
+        "name": "Baklava",
+        "description": "A sweet, flaky pastry filled with chopped nuts and honey.",
+        "price": 4.50
+    },
+    {
+        "name": "Mint Lemonade",
+        "description": "A refreshing blend of lemonade and fresh mint leaves.",
+        "price": 4.00
+    }
+]
