@@ -8,27 +8,33 @@ $red: #DD4533;
 $light-blue: #87EFD6;
 $dark-blue: #2A4D58;
 
-// Bulma component variables
-$background-color: $dark-blue;
+
+// Brand color classes here
+
+//Background colors
+.bg-burnt-orange { background-color: $burnt-orange; }
+.bg-orange { background-color: $orange; }
+.bg-red { background-color: $red; }
+.bg-light-blue { background-color: $light-blue; }
+.bg-dark-blue { background-color: $dark-blue; }
+
+// Text colors
+.text-burnt-orange { color: $burnt-orange; }
+.text-orange { color: $orange; }
+.text-red { color: $red; }
+.text-light-blue { color: $light-blue; }
+.text-dark-blue { color: $dark-blue; }
+
+// Border colors
+.border-burnt-orange { border-color: $burnt-orange; }
+.border-orange { border-color: $orange; }
+.border-red { border-color: $red; }
+.border-light-blue { border-color: $light-blue; }
+.border-dark-blue { border-color: $dark-blue; }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// card flip
 $flipIcon: url("data:image/svg+xml,%3Csvg width='300' height='400' version='1.1' viewBox='0 0 300 400' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='matrix(-.70408 .71012 .71012 .70408 254.46 -106.04)' fill='%23333' fill-opacity='0.5' %3E%3Cg transform='matrix(.58999 .0052778 .0052778 .5899 141.76 -10.776)' fill='%23333'%3E%3Cpath d='m421.89 247.04v7.964c0 71.572-58.229 129.8-129.8 129.8s-129.8-58.229-129.8-129.8v-65.551l27.712 27.634 53.652-53.652-126.42-126.34-128.77 128.87 53.652 53.652 30.061-30.16v65.552c0 58.762 22.868 113.99 64.393 155.52s96.755 64.393 155.52 64.393 113.99-22.868 155.52-64.393c41.524-41.524 64.392-96.755 64.392-155.52v-7.964z' fill='%23333'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
 
 .flip-wrapper {
