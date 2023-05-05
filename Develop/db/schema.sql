@@ -30,6 +30,10 @@ CREATE TABLE food_trucks (
     social_media_links JSON,
     createdAt DATETIME NOT NULL,
     updatedAt DATETIME NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    lat FLOAT NOT NULL,
+    lng FLOAT NOT NULL,
+
     FOREIGN KEY (owner_id) REFERENCES users(id)
 );
 

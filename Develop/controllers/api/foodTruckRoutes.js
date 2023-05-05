@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { FoodTruck } = require('../../models');
 const withAuth = require('../../utils/auth');
+const opencage = require('opencage-api-client');
 
 // A route for creating a food truck
 router.post('/', withAuth, async (req, res) => {
@@ -26,6 +27,10 @@ router.put('/:id', withAuth, async (req, res) => {
             image: req.body.image,
             contact_info: req.body.contact_info,
             social_media_links: req.body.social_media_links,
+            address:req.body.address,
+            lat:req.body.lat,
+            lng:req.body.long,
+
         },
         {
             where: {

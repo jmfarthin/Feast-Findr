@@ -37,18 +37,18 @@
                 <h2 class="title">FIND YOUR FLAVOR</h2>
                 <p>Delicious food for every mood.</p>
 
-                <form class="field" action="/search" method="POST">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Enter your city" required>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <button class="button is-rounded">Search</button>
-                        </div>
-                    </div>
-                </form>
+                 <form id="search-form">
+        <label for="street">Street:</label>
+        <input type="text" id="street" name="street" required>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required>
+        <label for="zipcode">Zipcode: </label>
+        <input type="text" id="zipcode" placeholder = "recommended but not required" name="zipcode" >
+        <button type="submit">Find Food Trucks Near You!</button>
+    </form>
+    <div id="food-truck-list"></div>
             </div>
         </div>
     </div>
