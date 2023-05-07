@@ -1,34 +1,32 @@
 
-{{each data}}
-<div class="tile is-ancestor">
-  <div class="tile is-parent is-4">
-     <div class="tile is-parent">
-        <div class="flip-wrapper">
-          <input type="checkbox" id="toggle-{{@index}}">
-          <label class="tile is-child flip-tile .bg-burnt-orange" for="toggle-{{@index}}">
-            <div class="flip-tile-front box">
-              <article class="media">
-          <figure class="media-left">
-            {{#if profilePic}}
-              <p class="image is-64x64">
-                <img src="{{profilePic}}" alt="{{name}}">
-              </p>
-            {{else}}
-              <p class="image is-64x64">
-                <img src="https://images.unsplash.com/photo-1612208176815-e132bcf971b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Placeholder image">
-              </p>
-            {{/if}}
-          </figure>
-              <p class="title .text-burnt-orange">{{name}}</p>
+<body>
+  <section class="section">
+    <div class="container">
+        <div class="flip-tile">
+            <div class="flip-tile-inner">
+                <div class="flip-tile-front tile is-child box">
+                    <h1 class="title tile-content has-text-centered">{{truck.name}}</h1>
+                    <figure class="image is-128x128 has-text-centered">
+                        <img class="is-rounded" src="{{truck.image}}" alt="Food truck profile picture">
+                    </figure>
+                    <p class="subtitle has-text-centered tile-content">Click to see menu</p>
+                </div>
+                <div class="flip-tile-back tile is-child box">
+                    <h1 class="title has-text-centered">Menu</h1>
+                    <div class="content">
+                        <ul>
+                            {{#each truck.menu}}
+                            <li>
+                                <p class="title is-5 tile-content">{{this.name}}</p>
+                                <p class="subtitle is-6 tile-content">Price: ${{this.price}}</p>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="flip-tile-back box .bg-light-blue">
-              <h4 class="title .text-light-blue">Menu Items</h4>
-                {{#each menuItems}}
-                <div class="menu-item">
-                <p class="menu-item-name">{{name}}</p>
-                <p class="menu-item-description">{{description}}</p>
-                <p class="menu-item-price">{{price}}</p>
-            </div>
-          </label>
         </div>
-         {{/each}}
+    </div>
+</section>
+</body>
+

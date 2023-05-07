@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project, User, MenuItem } = require('../models');
+const { FoodTruck, User, MenuItem } = require('../models');
 const withAuth = require('../utils/auth');
 const searchRoute = require('./api/searchRoute');
 const { getUserCoordinates } = require('./controllers/UserController');
@@ -31,11 +31,11 @@ router.get('/truck/:id', async (req, res) => {
 
 // A route to take signed in users to their profile page
 router.get('/profile', async (req, res) => {
-    const userFoodTruck = await FoodTruck.findByPk(req.user.id,{
+    const userFoodTruck = await FoodTruck.findByPk(req.session.user_id, {
         include: [{model: MenuItem}]
-      })
+    });
     
-      if (userFoodTruck) {
+    if (userFoodTruck) {
 
         res.json(userFoodTruck);
 
@@ -44,7 +44,7 @@ router.get('/profile', async (req, res) => {
     }
 
     res.render("profile", {
-        userFoodTruck
+        ...userFoodTruck,
     })
 });
 
@@ -59,10 +59,52 @@ router.get('/login', (req, res) => {
 router.post('/search', searchRoute.findNearbyFoodTrucks);
 router.get('/truck', (req, res) => {
     res.render('truck');
+router.get('/truck', withAuth, async (req, res) => {
+
+    try {
+        const currentUser = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password']}
+        });
+    
+        const user = currentUser.get({ plain: true });
+    
+        res.render('truck', {
+            ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+    
+    
 });
 
-router.get('/menu', (req, res) => {
-    res.render('menu');
+router.get('/menu', async (req, res) => {
+
+    try {
+        const currentFoodTruck = await FoodTruck.findOne({
+            where: {
+                owner_id: req.session.user_id
+            }
+        });
+
+        console.log(currentFoodTruck.id);
+
+        // if (!currentFoodTruck) {
+        //     res
+        //         .status(400)
+        //         .json({message: 'Cannot find food truck'})
+        // }
+    
+        const truck = currentFoodTruck.get({ plain: true });
+    
+        res.render('menu', {
+            ...truck,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
 })
 
 module.exports = router;

@@ -2,8 +2,6 @@
 
  handlebars
 //Mixins
-.bulma-clearfix-mixin {
-  @include clearfix;
 
 // Text Size
 h1 {
@@ -42,10 +40,10 @@ $flipIcon: url("data:image/svg+xml,%3Csvg width='300' height='400' version='1.1'
 
 .flip-wrapper {
   position: relative;
-
+  
   // compensate for the space of the last item in a column
-  &.bottom {
-    margin-bottom: -1.4em;
+  &.bottom{
+    margin-bottom:-1.4em;
   }
   @at-root .tile input[type="checkbox"] {
     // Hiding the checkbox. We never want to see it.
@@ -84,12 +82,13 @@ $flipIcon: url("data:image/svg+xml,%3Csvg width='300' height='400' version='1.1'
       backface-visibility: hidden;
       transform-style: preserve-3d;
       transition: all 0.4s ease-in-out;
-
+      
       // Add the icon to indicate functionality
       background-image: $flipIcon;
       background-size: 20px 20px;
       background-repeat: no-repeat;
       background-position: top 10px right 10px;
+      
     }
     .flip-tile-front {
       // Default rotation values
