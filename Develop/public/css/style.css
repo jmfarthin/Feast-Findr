@@ -69,11 +69,16 @@
 .menu-button {
     padding: 0.5rem 1rem;
     background-color: #00d1b2;
-    color: #fff;
+    color: #2A4D58;
     border: none;
     text-decoration: none;
     cursor: pointer;
     border-radius: 25px;
+}
+
+.menu-button:hover {
+    background-color: #D95437;
+    color: #87EFD6;
 }
 
 .form-container {
