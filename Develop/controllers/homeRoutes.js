@@ -45,5 +45,13 @@ router.get('/login', (req, res) => {
     })
 });
 
+router.get('/truck', (req, res) => {
+    res.render('truck');
+});
+
+router.get('/menu', (req, res) => {
+    res.render('menu');
+})
+
 module.exports = router;
 
