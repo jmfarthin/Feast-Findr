@@ -1,0 +1,223 @@
+/* Brand color classes here */
+
+/* Background colors */
+.bg-burnt-orange { background-color: #D95437; }
+.bg-orange { background-color: #E17A2C; }
+.bg-red { background-color: #DD4533; }
+.bg-light-blue { background-color: #87EFD6; }
+.bg-dark-blue { background-color: #2A4D58; }
+
+/* Text colors */ 
+.text-burnt-orange { color: #D95437; }
+.text-orange { color: #E17A2C; }
+.text-red { color: #DD4533; }
+.text-light-blue { color: #87EFD6; }
+.text-dark-blue { color: #2A4D58; }
+
+/* Border colors */
+.border-burnt-orange { border-color: #D95437; }
+.border-orange { border-color: #E17A2C; }
+.border-red { border-color: #DD4533; }
+.border-light-blue { border-color: #87EFD6; }
+.border-dark-blue { border-color: #2A4D58; }
+
+.brand-font {
+    font-family: 'Secular One', sans-serif;
+}
+
+.search-title {
+    margin: 0 0 4% 0;
+}
+
+.truck-owner-title {
+    font-size: 48px !important;
+    color: #87EFD6 !important;
+    padding: 30px;
+}
+
+.truck-owner-p {
+    font-size: 21px !important;
+    color: #2A4D58 !important;
+}
+
+.custom-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo-container {
+    display: inline-block;
+}
+
+.logo-image {
+    width: 200px;
+    height: auto;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-item {
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.menu-button {
+    padding: 0.5rem 1rem;
+    background-color: #00d1b2;
+    color: #2A4D58;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.menu-button:hover {
+    background-color: #D95437;
+    color: #87EFD6;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .form-container label,
+  .form-container input,
+  .form-container button {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+.search-field {
+    width: 200px !important;
+    padding: 1% 0;
+    margin: 7% 0 4% 0;
+    text-align: center;
+}
+
+.search-btn {
+    font-size: 21px;
+    width: 240px !important;
+    border: none;
+    border-radius: 25px;
+    padding: 2% 0;
+    margin: 1% 0 0 0;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: #E17A2C;
+    color: #2A4D58;
+}
+
+.btn-hover:hover {
+    background-color: #87EFD6;
+    color: #E17A2C;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 10% 0 0;
+}
+
+.content-container h2 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.content-container p {
+    font-size: 21px;
+    margin: 0 10%;
+    color: #2A4D58 !important;
+}
+
+input[type="text"]::placeholder {
+    text-align: center;
+}
+
+.truck-owner-border {
+    margin: 0;
+    padding: 0;
+    border: 20px solid #D95437;
+}
+
+.no-padding-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.no-padding-columns {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.no-margin-padding {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.owner-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.inner-container {
+    width: 60%;
+}
+
+.card {
+    border: none;
+    box-shadow: none !important;
+}
+
+.round-prof img {
+    border-radius: 50% !important;
+}
+
+.review-title {
+    font-size: 48px !important;
+    color: #D95437 !important;
+    margin: 0 0 4% 0 !important;
+}
+
+.review-p {
+    font-size: 18px;
+    color: #2A4D58 !important;
+}
+
+.star-color {
+    color: #ffe900;
+}
+
+.centered-image {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.is-160x160 {
+    width: 160px;
+    height: 160px;
+}
+
+.footer-section {
+    font-family: 'Secular One', sans-serif;
+    background-color: #2A4D58;
+    padding: 1.5rem 0;
+    color: #87EFD6;
+  }
