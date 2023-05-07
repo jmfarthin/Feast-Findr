@@ -25,6 +25,10 @@
     font-family: 'Secular One', sans-serif;
 }
 
+.search-title {
+    margin: 0 0 4% 0;
+}
+
 .truck-owner-title {
     font-size: 48px !important;
     color: #87EFD6 !important;
@@ -171,3 +175,44 @@ input[type="text"]::placeholder {
 .inner-container {
     width: 60%;
 }
+
+.card {
+    border: none;
+    box-shadow: none !important;
+}
+
+.round-prof img {
+    border-radius: 50% !important;
+}
+
+.review-title {
+    font-size: 48px !important;
+    color: #D95437 !important;
+    margin: 0 0 4% 0 !important;
+}
+
+.review-p {
+    font-size: 18px;
+    color: #2A4D58 !important;
+}
+
+.star-color {
+    color: #ffe900;
+}
+
+.centered-image {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.is-160x160 {
+    width: 160px;
+    height: 160px;
+}
+
+.footer-section {
+    font-family: 'Secular One', sans-serif;
+    background-color: #2A4D58;
+    padding: 1.5rem 0;
+    color: #87EFD6;
+  }
