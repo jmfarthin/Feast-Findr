@@ -28,20 +28,20 @@ router.get('/truck/:id', async (req, res) => {
 
 // A route to take signed in users to their profile page
 router.get('/profile', withAuth, async (req, res) => {
-    const userFoodTruck = await FoodTruck.findByPk(req.user.id,{
-        include: [{model: }]
-      })
-    
-      if (userFoodTruck) {
+    const userFoodTruck = await FoodTruck.findByPk(req.user.id, {
+        include: [{ model: User }]
+    })
+
+    if (userFoodTruck) {
         res.json(userFoodTruck);
-    
-      } else {
+
+    } else {
         res.status(404).json({ message: 'Food truck not found for the current user' });
-      }
-    
-        res.render("profile", {
-            userFoodTruck
-        })
+    }
+
+    res.render("profile", {
+        userFoodTruck
+    })
 });
 
 // A route that will either direct the user to the login page, or to their profile page if they are already signed in
