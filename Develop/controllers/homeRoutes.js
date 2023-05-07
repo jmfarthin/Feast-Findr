@@ -33,15 +33,16 @@ router.get('/profile', async (req, res) => {
       })
     
       if (userFoodTruck) {
+
         res.json(userFoodTruck);
-    
-      } else {
+
+    } else {
         res.status(404).json({ message: 'Food truck not found for the current user' });
-      }
-    
-        res.render("profile", {
-            userFoodTruck
-        })
+    }
+
+    res.render("profile", {
+        userFoodTruck
+    })
 });
 
 // A route that will either direct the user to the login page, or to their profile page if they are already signed in
