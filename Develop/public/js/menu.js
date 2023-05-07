@@ -11,6 +11,7 @@ let menuItems = [];
 addMenuItemButton.addEventListener('click', () => {
     // Only add menu item if there are fewer than 10
     if (menuItems.length < 10) {
+        menuItemsContainer.classList.remove('is-hidden');
         // Create new menu item element
         const menuItemElement = document.createElement('div');
         menuItemElement.classList.add('menu-item', 'block');
