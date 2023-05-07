@@ -13,15 +13,23 @@ const truckFormHandler = async (event) => {
     const owner_id = document.getElementById('truck-form').getAttribute('data-session');
     // const address = document.querySelector('#address').value.trim();
 
-
+    const newTruck = {
+        owner_id: owner_id,
+        name: name,
+        cuisine: cuisine,
+        description: description,
+        image: image,
+        contact_info: contact_info,
+        social_media_links: { website: social_media_links }
+    };
 
     if (name && cuisine && description && contact_info) {
         // Send a POST request to the API endpoint
         try {
-            console.log(JSON.stringify({ owner_id, name, cuisine, description, image, contact_info, social_media_links }));
+            console.log(JSON.stringify(newTruck));
             const response = await fetch('/api/foodTruck', {
                 method: 'POST',
-                body: JSON.stringify({ owner_id, name, cuisine, description, image, contact_info, social_media_links }),
+                body: JSON.stringify( newTruck ),
                 headers: { 'Content-Type': 'application/json' },
             });
 

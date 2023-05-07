@@ -5,7 +5,8 @@ const withAuth = require('../../utils/auth');
 // A route for creating a food truck
 router.post('/', async (req, res) => {
     try {
-        const newFoodTruck = await FoodTruck.create(JSON.parse(req.body)[0]);
+        console.log({ ...req.body });
+        const newFoodTruck = await FoodTruck.create({ ...req.body });
 
         res.status(200).json(newFoodTruck);
     } catch (err) {
