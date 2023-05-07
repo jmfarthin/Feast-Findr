@@ -5,7 +5,8 @@ const withAuth = require('../../utils/auth');
 // a route to create a menu item
 router.post('/', async (req, res) => {
     try {
-        const itemData = await MenuItem.BulkCreate(req.body);
+        console.log(req.body)
+        const itemData = await MenuItem.bulkCreate(req.body);
 
         res.status(200).json(itemData);
     } catch (err) {

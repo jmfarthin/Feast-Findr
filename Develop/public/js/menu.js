@@ -83,10 +83,14 @@ const menuFormHandler = async (event) => {
 
     // send menu
     try {
+        console.log(JSON.stringify(menuItems));
         const response = await fetch('/api/menu', {
             method: 'POST',
-            body: JSON.stringify({ menuItems }),
-            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(menuItems),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
 
         });
 
