@@ -1,4 +1,3 @@
-// controllers/SearchController.js
 
 const FoodTruck = require('../models/FoodTruck');
 const { convertAddressToCoordinates } = require('../../utils/geolocation');
