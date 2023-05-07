@@ -28,11 +28,8 @@ router.get('/truck/:id', async (req, res) => {
 
 // A route to take signed in users to their profile page
 router.get('/profile', withAuth, async (req, res) => {
-    // try {
-
-    // } catch (err) {
-    //     res.status(500).json(err);
-    // }
+    const userFoodTruck = await FoodTruck.findByPk(req.user.id,{
+        include: [{model: }]
 
     res.render("profile", {
     })
