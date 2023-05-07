@@ -5,9 +5,9 @@
         <div class="flip-tile">
             <div class="flip-tile-inner">
                 <div class="flip-tile-front tile is-child box">
-                    <h1 class="title tile-content">{{foodTruck.name}}</h1>
+                    <h1 class="title tile-content">{{truck.name}}</h1>
                     <figure class="image is-128x128 has-text-centered">
-                        <img class="is-rounded" src="{{foodTruck.profilePicture}}" alt="Food truck profile picture">
+                        <img class="is-rounded" src="{{truck.image}}" alt="Food truck profile picture">
                     </figure>
                     <p class="subtitle has-text-centered tile-content">Click to see menu</p>
                 </div>
@@ -15,7 +15,7 @@
                     <h1 class="title">Menu</h1>
                     <div class="content">
                         <ul>
-                            {{#each foodTruck.menu}}
+                            {{#each truck.menu}}
                             <li>
                                 <p class="title is-5 tile-content">{{this.name}}</p>
                                 <p class="subtitle is-6 tile-content">Price: ${{this.price}}</p>
@@ -30,4 +30,3 @@
 </section>
 </body>
 
- <script src="/Develop/public/js/tileflip.js"></script>
