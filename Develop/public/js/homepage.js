@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const newSearchButton = document.getElementById('new-search');
     const addressForm = document.getElementById('address-form');
     const resultDiv = document.getElementById('result');
-    const foodTrucksDiv = document.getElementById('food-trucks');
+    const foodTrucksDiv = document.getElementById('food-truck-list');
   
      form.addEventListener('submit', async (event))
 
