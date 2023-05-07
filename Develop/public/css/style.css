@@ -221,3 +221,45 @@ input[type="text"]::placeholder {
     padding: 1.5rem 0;
     color: #87EFD6;
   }
+
+  .user-body {
+    background-color: #2A4D58 !important;
+}
+.left-tile {
+    background-color: #E17A2C !important;
+}
+.right-tile {
+    background-color: #D95437 !important;
+}
+
+/* Below is the css for the tile flip */
+.flip-tile {
+    perspective: 1000px;
+    width: 300px;
+    height: 300px;
+}
+.flip-tile-inner {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    width: 100%;
+    height: 100%;
+}
+.flip-tile:click .flip-tile-inner {
+    transform: rotateY(180deg);
+}
+.flip-tile-front,
+.flip-tile-back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+.flip-tile-back {
+    transform: rotateY(180deg);
+}
+.tile-content {
+    padding: 0 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}

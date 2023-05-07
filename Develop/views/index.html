@@ -1,49 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>User Profile Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-  </head>
-  <body>
-    <section class="hero is-primary">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">User Profile</h1>
-          <a href="#" class="button is-light">Edit Profile</a>
-        </div>
-      </div>
-    </section>
-    
-    <section class="section">
-      <div class="container">
-        <div class="columns is-multiline">
-          <div class="column is-one-half">
-            <div class="card">
-              <div class="card-content">
-                <article class="media">
-                  <figure class="media-left .bulma-clearfix-mixin">
-                    
-                      <p class="image is-128x128 .bulma-clearfix-mixin">
-                        <img src="https://images.unsplash.com/photo-1612208176815-e132bcf971b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="{{name}}">
-                      </p>
-                      
-                  </figure>
-                      <p class="title .text-burnt-orange">My Food Truck</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Truck Page</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/Develop/public/css/jass.css">
+    <link rel="stylesheet" href="/Develop/public/sass/mystyles.scss">
+    <link rel="stylesheet" href="/Develop/public/css/style.css">
+    <link rel="stylesheet" href="/Develop/public/css/mystyles.css"
+</head>
+<body>
+  <section class="section">
+    <div class="">
+        <div class="flip-tile ">
+            <div class="flip-tile-inner bg-light-blue">
+                <div class="flip-tile-front tile is-child box">
+                    <h1 class="title tile-content">{{foodTruck.name}}</h1>
+                    <figure class="image is-128x128 has-text-centered">
+                        <img class="is-rounded" src="{{foodTruck.profilePicture}}" alt="Food truck profile picture">
+                    </figure>
+                    <p class="subtitle has-text-centered tile-content">Click to see menu</p>
+                </div>
+                <div class="flip-tile-back tile is-child box">
+                    <h1 class="title">Menu</h1>
+                    <div class="content">
+                        <ul>
+                            {{#each foodTruck.menu}}
+                            <li>
+                                <p class="title is-5 tile-content">{{this.name}}</p>
+                                <p class="subtitle is-6 tile-content">Price: ${{this.price}}</p>
+                            </li>
+                            {{/each}}
+                        </ul>
                     </div>
-              </div>
+                </div>
             </div>
-          </div>
-          
-          <div class="column is-one-half">
-            <div class="card">
-              <div class="card-content">
-                <h2 class="title">Another Post Title</h2>
-                <p class="content">Suspendisse potenti. Praesent ac lectus dignissim, consequat velit sit amet, luctus elit. Vivamus at nisl vel dolor pharetra fermentum. Nullam eu velit ut nulla tempus euismod.</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-  </body>
-</html>
+    </div>
+</section>
+</body>
+
+ <script src="/Develop/public/js/tileflip.js"></script>
