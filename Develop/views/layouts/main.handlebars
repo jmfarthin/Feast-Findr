@@ -28,12 +28,22 @@
             </a>
             <div class="menu-container">
                 <a class="menu-item text-light-blue brand-font" href="/">HOME</a>
-                <a class="menu-item menu-button brand-font" href="/login">
-                    {{#if loggedIn}}
+                {{#if logged_in}}
+
+                <a class="menu-item menu-button brand-font" href="/profile">
                     <strong>Profile</strong>
-                    {{else}}
+                </a>
+
+                <a class="menu-item menu-button brand-font" id="logout">
+                    <strong>Logout</strong>
+                </a>
+
+                {{else}}
+                <a class="menu-item menu-button brand-font" href="/login">
                     <strong>SIGN UP / LOGIN</strong>
-                    {{/if}}
+                </a>
+                    
+                {{/if}}
                 </a>
             </div>
         </nav>
@@ -53,6 +63,9 @@
         </div>
     </footer>
 
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
