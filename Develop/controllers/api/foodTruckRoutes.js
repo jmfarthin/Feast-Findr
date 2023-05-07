@@ -66,4 +66,22 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
 });
 
-module.exports = router;
+const getFoodTruckById = async (req, res) => {
+    const { id } = req.params;
+  
+    try {
+      const selectedFoodTruck = await FoodTruck.findByPk(id);
+  
+      if (!selectedFoodTruck) {
+        return res.status(404).json({ error: 'Food truck not found' });
+      }
+  
+      res.status(200).json(selectedFoodTruck);
+    } catch (error) {
+      res.status(500).json({ error: 'An error occurred while fetching the food truck' });
+    }
+  };
+  
+
+module.exports ={ router,
+getFoodTruckById};
