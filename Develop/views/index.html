@@ -10,20 +10,20 @@
     <link rel="stylesheet" href="/Develop/public/css/style.css">
     <link rel="stylesheet" href="/Develop/public/css/mystyles.css"
 </head>
-<body>
+<body class="user-body">
   <section class="section">
     <div class="">
         <div class="flip-tile ">
             <div class="flip-tile-inner bg-light-blue">
-                <div class="flip-tile-front tile is-child box">
-                    <h1 class="title tile-content">{{foodTruck.name}}</h1>
+                <div class="flip-tile-front tile is-child box tile-front">
+                    <h1 class="title tile-content has-text-centered">{{foodTruck.name}}</h1>
                     <figure class="image is-128x128 has-text-centered">
                         <img class="is-rounded" src="{{foodTruck.profilePicture}}" alt="Food truck profile picture">
                     </figure>
                     <p class="subtitle has-text-centered tile-content">Click to see menu</p>
                 </div>
-                <div class="flip-tile-back tile is-child box">
-                    <h1 class="title">Menu</h1>
+                <div class="flip-tile-back tile is-child box tile-back">
+                    <h1 class="title has-text-centered">Menu</h1>
                     <div class="content">
                         <ul>
                             {{#each foodTruck.menu}}
