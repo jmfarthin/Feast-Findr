@@ -3,18 +3,24 @@ const { FoodTruck } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // A route for creating a food truck
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
     try {
-        const newFoodTruck = await FoodTruck.create({
-            ...req.body,
-            owner_id: req.session.user_id,
-        });
+        const newFoodTruck = await FoodTruck.create(JSON.parse(req.body)[0]);
 
         res.status(200).json(newFoodTruck);
     } catch (err) {
         res.status(400).json(err);
     }
 });
+
+router.get('/:id', async (req, res) => {
+    try {
+        const foodTruck = await FoodTruck.findByPk(req.params.id);
+        res.status(200).json(foodTruck);
+    } catch (error) {
+        res.status(400).json(err);
+    }
+})
 
 // A route for updating a food truck - likely updating the food truck's location
 router.put('/:id', withAuth, async (req, res) => {
@@ -27,12 +33,12 @@ router.put('/:id', withAuth, async (req, res) => {
             contact_info: req.body.contact_info,
             social_media_links: req.body.social_media_links,
         },
-        {
-            where: {
-                id: req.params.id,
-                owner_id: req.session.user_id,
-            }
-        });
+            {
+                where: {
+                    id: req.params.id,
+                    owner_id: req.session.user_id,
+                }
+            });
 
         res.status(200).json(newFoodTruck);
     } catch (err) {
