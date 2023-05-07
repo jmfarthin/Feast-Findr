@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
+const searchRoute = require('./api/searchRoute');
+const { getUserCoordinates } = require('./controllers/UserController');
 
 // route to get all food trucks when the application is booted up
 router.get('/', async (req, res) => {
@@ -45,5 +47,15 @@ router.get('/login', (req, res) => {
     })
 });
 
-module.exports = router;
+// A route that will allow the user to find the closest nearby food trucks with Opencage, passing it through geolib
+router.post('/search', searchRoute.findNearbyFoodTrucks);
 
+
+// A route to get the user's coordinates 
+router.get('/user-coordinates', getUserCoordinates);
+
+
+
+
+
+module.exports = router;
