@@ -1,43 +1,55 @@
-// Add menu form
 
+
+const form = document.getElementById('menu-form');
+const menuItemsContainer = document.getElementById('items-container');
+const addMenuItemButton = document.getElementById('add-menu-item');
+const truckId = document.getElementById('for-truck-id').getAttribute('data-session')
+// Initialize menu items array
 let menuItems = [];
-const truckId = document.querySelector('#truck-id').getAttribute('data-id');
-const memuForm = document.getElementById('menu-form');
-const itemsContainer = document.getElementById('items-container');
-const addItemButton = document.getElementById('add-menu-item');
 
-addItemButton.addEventListener('click', () => {
+// Add event listener to "Add Menu Item" button
+addMenuItemButton.addEventListener('click', () => {
     // Only add menu item if there are fewer than 10
     if (menuItems.length < 10) {
         // Create new menu item element
         const menuItemElement = document.createElement('div');
-        menuItemElement.classList.add('menu-item');
+        menuItemElement.classList.add('menu-item', 'block');
 
         // Create inputs for name, description, and price
-        const itemNameInput = document.createElement('input');
-        itemNameInput.type = 'text';
-        itemNameInput.name = `item-${menuItems.length + 1}-name`;
-        itemNameInput.id = `item-${menuItems.length + 1}-name`;
-        const itemDescriptionInput = document.createElement('input');
-        itemDescriptionInput.type = 'text';
-        itemDescriptionInput.name = `item-${menuItems.length + 1}-description`;
-        itemDescriptionInput.id = `item-${menuItems.length + 1}-description`;
-        const itemPriceInput = document.createElement('input');
-        itemPriceInput.type = 'number';
-        itemPriceInput.name = `item-${menuItems.length + 1}-price`;
-        itemPriceInput.id = `item-${menuItems.length + 1}-price`;
-        itemPriceInput.step = '0.01';
-
-        // Add inputs to menu item element
-        menuItemElement.appendChild(document.createTextNode('Name: '));
-        menuItemElement.appendChild(itemNameInput);
-        menuItemElement.appendChild(document.createTextNode(' Description: '));
-        menuItemElement.appendChild(itemDescriptionInput);
-        menuItemElement.appendChild(document.createTextNode(' Price: $'));
-        menuItemElement.appendChild(itemPriceInput);
+        const itemId = menuItems.length + 1;
+        menuItemElement.innerHTML =
+            `<div class="field is-grouped control">
+        <label class="label control" for="item-${itemId}-name">Name</label>
+        <div class="control">
+            <input class="input" type="text" id="item-${itemId}-name" name="item-${itemId}-name"
+                placeholder="Thelma's Famous Waffles">
+        </div>
+        <label class="label control">Price</label>
+        <div class="control">
+            <input class="input" type="number" step="0.01" id="item-${itemId}-price" name="item-${itemId}-price"
+                placeholder="10.95">
+        </div>
+        <div class="control">
+            <button type="button" class="button" id="remove-item-button">Remove</button>
+        </div>
+        </div>
+        <div class="field">
+            <label class="label control" for="item-${itemId}-description">Description</label>
+            <div class="control">
+                <textarea class="textarea" id="item-${itemId}-description" name="item-${itemId}-description"
+                    placeholder="Tasty buttermilke waffles!"></textarea>
+        </div>
+        </div>`;
+        // Add event listener to "Remove" button for menu item
+        const removeButton = menuItemElement.querySelector('#remove-item-button');
+        removeButton.addEventListener('click', () => {
+            // Remove menu item from container and menuItems array
+            menuItemsContainer.removeChild(menuItemElement);
+            menuItems.splice(menuItems.indexOf(menuItems.find(item => item.element === menuItemElement)), 1);
+        });
 
         // Add menu item element to container
-        itemsContainer.appendChild(menuItemElement);
+        menuItemsContainer.appendChild(menuItemElement);
 
         // Add new menu item to menuItems array
         menuItems.push({
@@ -70,20 +82,25 @@ const menuFormHandler = async (event) => {
     }
 
     // send menu
-    const response = await fetch('/api/menu', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ menuItems })
-    });
+    try {
+        const response = await fetch('/api/menu', {
+            method: 'POST',
+            body: JSON.stringify({ menuItems }),
+            headers: { 'Content-Type': 'application/json' },
 
-    if (response.ok) {
-        // If successful, redirect the browser to the user profile page
-        document.location.replace('/profile');
-    } else {
-        console.error();
+        });
+
+        if (response.ok) {
+            console.log(JSON.stringify(menuItems));
+            // If successful, redirect the browser to the user profile page
+            // document.location.replace('/');
+        } else {
+            console.error();
+        }
+    } catch (error) {
+        console.log(error)
     }
+
 
 };
 
