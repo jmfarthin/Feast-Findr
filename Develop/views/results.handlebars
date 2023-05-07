@@ -1,0 +1,16 @@
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">Food In Your Area</h1>
+            <div class="tile is-ancestor is-flex-wrap-wrap">
+                {{#each truck}}
+                {{> tiles}}
+                {{/each}}
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<script src="/js/tileflip.js"></script>

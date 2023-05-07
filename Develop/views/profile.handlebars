@@ -5,9 +5,9 @@
             <div class="tile is-ancestor">
                 <div class="tile is-4 is-vertical is-parent">
                     <div class="tile is-child box left-tile">
-                        <h1 class="title has-text-centered">{{foodTruck.name}}</h1>
+                        <h1 class="title has-text-centered">{{truck.name}}</h1>
                         <figure class="image is-128x128 has-text-centered">
-                            <img class="is-rounded" src="{{foodTruck.profilePicture}}" alt="Food truck profile picture">
+                            <img class="is-rounded" src="{{truck.image}}" alt="Food truck profile picture">
                         </figure>
                     </div>
                 </div>
@@ -16,7 +16,7 @@
                         <h1 class="title has-text-centered">Menu</h1>
                         <div class="content">
                             <ul>
-                                {{#each foodTruck.menu}}
+                                {{#each truck.menu}}
                                 <li>
                                     <p class="title is-5">{{this.name}}</p>
                                     <p class="subtitle is-6">Price: ${{this.price}}</p>
