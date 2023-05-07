@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class FoodTruck extends Model {}
+class FoodTruck extends Model { }
 
 FoodTruck.init(
-    
+    {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -48,13 +48,14 @@ FoodTruck.init(
         longitude: {
             type: DataTypes.FLOAT,
         }
-     {
+    },
+    {
         sequelize,
         timestamps: true,
         freezeTableName: true,
         underscored: true,
         modelName: 'food_truck',
- }
+    }
 );
 
 module.exports = FoodTruck;
