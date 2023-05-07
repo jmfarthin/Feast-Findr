@@ -52,12 +52,52 @@ router.get('/login', (req, res) => {
     })
 });
 
-router.get('/truck', (req, res) => {
-    res.render('truck');
+router.get('/truck', withAuth, async (req, res) => {
+
+    try {
+        const currentUser = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password']}
+        });
+    
+        const user = currentUser.get({ plain: true });
+    
+        res.render('truck', {
+            ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+    
+    
 });
 
-router.get('/menu', (req, res) => {
-    res.render('menu');
+router.get('/menu', async (req, res) => {
+
+    try {
+        const currentFoodTruck = await FoodTruck.findOne({
+            where: {
+                owner_id: req.session.user_id
+            }
+        });
+
+        console.log(currentFoodTruck.id);
+
+        // if (!currentFoodTruck) {
+        //     res
+        //         .status(400)
+        //         .json({message: 'Cannot find food truck'})
+        // }
+    
+        const truck = currentFoodTruck.get({ plain: true });
+    
+        res.render('menu', {
+            ...truck,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
 })
 
 module.exports = router;
