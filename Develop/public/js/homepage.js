@@ -2,6 +2,8 @@ const signupButtonHandler = async (event) => {
     document.location.replace(`/login`);
 };
 
+const getUserCoordinates = require('../api/userController');
+const findNearbyFoodTrucks = require ('../api/searchRoute')
 
 
 document
@@ -16,25 +18,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultDiv = document.getElementById('result');
     const foodTrucksDiv = document.getElementById('food-trucks');
   
-    form.addEventListener('submit', async (event))
+     form.addEventListener('submit', async (event))
 
+   event.preventDefault();
 
-
-
-  event.preventDefault();
-
-  const address = form.address.value.trim();
+  const street = form.street.value.trim();
   const city = form.city.value.trim();
   const state = form.state.value.trim();
   const zipCode = form.zipCode.value.trim();
 
-  const fullAddress = `${address}, ${city}, ${state}` + (zipCode ? `, ${zipCode}` : '');
+  const fullAddress = `${street}, ${city}, ${state}` + (zipCode ? `, ${zipCode}` : '');
   const userCoordinates = await getUserCoordinates(fullAddress);
 
   if (userCoordinates) {
     const foodTrucks = await findNearbyFoodTrucks(userCoordinates);
     displayFoodTrucks(foodTrucks);
-    addressForm.hidden = true;
+    form.hidden = true;
     resultDiv.hidden = false;
   } else {
     alert('Unable to find coordinates for the provided address. Please try again.');
@@ -46,39 +45,7 @@ newSearchButton.addEventListener('click', () => {
   resultDiv.hidden = true;
 });
 
-const getUserCoordinates = async (address) => {
-  try {
-    const response = await fetch(`/coordinates?address=${encodeURIComponent(address)}`);
-    const coordinates = await response.json();
 
-    if (coordinates.error) {
-      console.error('Error fetching coordinates:', coordinates.error);
-      return null;
-    }
-
-    return coordinates;
-  } catch (error) {
-    console.error('Error fetching coordinates:', error.message);
-    return null;
-  }
-};
-
-const findNearbyFoodTrucks = async (userCoordinates) => {
-  try {
-    const response = await fetch(`/food-trucks?latitude=${userCoordinates.latitude}&longitude=${userCoordinates.longitude}`);
-    const foodTrucks = await response.json();
-
-    if (foodTrucks.error) {
-      console.error('Error fetching food trucks:', foodTrucks.error);
-      return [];
-    }
-
-    return foodTrucks;
-  } catch (error) {
-    console.error('Error fetching food trucks:', error.message);
-    return [];
-  }
-};
 
 const displayFoodTrucks = (foodTrucks) => {
   foodTrucksDiv.innerHTML = '';
