@@ -1,6 +1,9 @@
 @charset "utf-8";
 
-
+//Mixins
+.bulma-clearfix-mixin {
+  @include clearfix;
+}
 
 // Brand Colors
 $burnt-orange: #D95437;
