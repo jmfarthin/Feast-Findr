@@ -1,32 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FeastFindr</title>
-    <link rel="stylesheet" href="../public/css/jass.css">
-    <link rel="stylesheet" href="../sass/mystyles.scss">
-    <link rel="stylesheet" href="../public/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="../public/css/mystyles.css">
-</head>
-
-<div class="tile is-ancestor">
-  {{#each data}}
-  <div class="tile is-parent is-4">
-     <div class="tile is-parent">
-        <div class="flip-wrapper">
-          <input type="checkbox" id="toggle-1">
-          <label class="tile is-child flip-tile" for="toggle-1">
-            <div class="flip-tile-front box">
-              <p class="title">One</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-            </div>
-            <div class="flip-tile-back box has-background-primary">
-              <h4 class="title">BACK of Card</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-            </div>
-          </label>
+<html>
+  <head>
+    <title>User Profile Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  </head>
+  <body>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">User Profile</h1>
+          <a href="#" class="button is-light">Edit Profile</a>
         </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <div class="columns is-multiline">
+          <div class="column is-one-half">
+            <div class="card">
+              <div class="card-content">
+                <article class="media">
+                  <figure class="media-left .bulma-clearfix-mixin">
+                    
+                      <p class="image is-128x128 .bulma-clearfix-mixin">
+                        <img src="https://images.unsplash.com/photo-1612208176815-e132bcf971b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="{{name}}">
+                      </p>
+                      
+                  </figure>
+                      <p class="title .text-burnt-orange">My Food Truck</p>
+                    </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="column is-one-half">
+            <div class="card">
+              <div class="card-content">
+                <h2 class="title">Another Post Title</h2>
+                <p class="content">Suspendisse potenti. Praesent ac lectus dignissim, consequat velit sit amet, luctus elit. Vivamus at nisl vel dolor pharetra fermentum. Nullam eu velit ut nulla tempus euismod.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

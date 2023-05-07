@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+ handlebars
+//Mixins
+.bulma-clearfix-mixin {
+  @include clearfix;
 
 // Text Size
 h1 {
