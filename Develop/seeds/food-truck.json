@@ -9,7 +9,12 @@
             "twitter": "https://twitter.com/taco_truck",
             "facebook": "https://facebook.com/taco_truck",
             "instagram": "https://instagram.com/taco_truck"
-        }
+        },
+        "address":"155 Sycamore St, Decatur, GA 30030" ,
+        "latitude":"33.774430",
+        "longitude":"-84.295040"
+
+    
     },
     {
         "name": "The Pizza Wagon",
@@ -21,7 +26,10 @@
             "twitter": "https://twitter.com/pizza_truck",
             "facebook": "https://facebook.com/pizza_truck",
             "instagram": "https://instagram.com/pizza_truck"
-        }
+        },
+        "address":"419 W Ponce de Leon Ave, Decatur, GA 30030" ,
+        "latitude":"33.775980",
+        "longitude":"-84.303330"
     },
     {
         "name": "Burgers on Wheels",
@@ -33,7 +41,10 @@
             "twitter": "https://twitter.com/burger_truck",
             "facebook": "https://facebook.com/burger_truck",
             "instagram": "https://instagram.com/burger_truck"
-        }
+        },
+        "address":"314 Church St, Decatur, GA 30030" ,
+        "latitude":"33.773480",
+        "longitude":"-84.295350"
     },
     {
         "name": "Rolling Sushi",
@@ -45,7 +56,11 @@
             "twitter": "https://twitter.com/sushi_truck",
             "facebook": "https://facebook.com/sushi_truck",
             "instagram": "https://instagram.com/sushi_truck"
-        }
+        },
+        "address":"151 Coventry Rd, Decatur, GA 30030" ,
+        "latitude":"33.777700",
+        "longitude":"-84.305460"
+    
     },
     {
         "name": "Smokin' Wheels BBQ",
@@ -57,7 +72,10 @@
             "twitter": "https://twitter.com/bbq_truck",
             "facebook": "https://facebook.com/bbq_truck",
             "instagram": "https://instagram.com/bbq_truck"
-        }
+        },
+        "address":"141 E College Ave, Decatur, GA 30030" ,
+        "latitude":"33.769740",
+        "longitude":"-84.296350"
     },
     {
         "name": "Scoops on the Move",
@@ -69,7 +87,10 @@
             "twitter": "https://twitter.com/ice_cream_truck",
             "facebook": "https://facebook.com/ice_cream_truck",
             "instagram": "https://instagram.com/ice_cream_truck"
-        }
+        },
+        "address":"184 N Main St. Alpharetta, GA 30009" ,
+        "latitude":"34.080753",
+        "longitude":"-84.294911"
     },
     {
         "name": "Thai Street Kitchen",
@@ -81,7 +102,10 @@
             "twitter": "https://twitter.com/thai_truck",
             "facebook": "https://facebook.com/thai_truck",
             "instagram": "https://instagram.com/thai_truck"
-        }
+        },
+        "address":"3595 Webb Bridge Rd, Alpharetta, GA 30005" ,
+        "latitude":"34.066537",
+        "longitude":"-84.304417"
     },
     {
         "name": "Cluck Truck",
@@ -93,7 +117,10 @@
             "twitter": "https://twitter.com/chicken_truck",
             "facebook": "https://facebook.com/chicken_truck",
             "instagram": "https://instagram.com/chicken_truck"
-        }
+        },
+        "address":"10000 Avalon Blvd Suite 150, Alpharetta, GA 30009",
+        "latitude":"34.070895",
+        "longitude":"-84.274415"
     },
     {
         "name": "Veggie Wheels",
@@ -105,7 +132,10 @@
             "twitter": "https://twitter.com/vegetarian_truck",
             "facebook": "https://facebook.com/vegetarian_truck",
             "instagram": "https://instagram.com/vegetarian_truck"
-        }
+        },
+        "address":"285 S Main St, Alpharetta, GA 30009" ,
+        "latitude":"34.066537",
+        "longitude":"-87.304417"
     },
     {
         "name": "Mediterranean Bites on Wheels",
@@ -117,7 +147,10 @@
             "twitter": "https://twitter.com/mediterranean_truck",
             "facebook": "https://facebook.com/mediterranean_truck",
             "instagram": "https://instagram.com/mediterranean_truck"
-        }
+        },
+        "address":"235 S Main St, 30009" ,
+        "latitude":"34.069128",
+        "longitude":"84.299374"
     }
 ]
 

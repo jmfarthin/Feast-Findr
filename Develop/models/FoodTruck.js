@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class FoodTruck extends Model {}
+class FoodTruck extends Model { }
 
 FoodTruck.init(
     {
@@ -38,6 +38,16 @@ FoodTruck.init(
         social_media_links: {
             type: DataTypes.JSON,
         },
+        address: {
+            type: DataTypes.STRING,
+        },
+        latitude: {
+            type: DataTypes.FLOAT,
+
+        },
+        longitude: {
+            type: DataTypes.FLOAT,
+        }
     },
     {
         sequelize,
@@ -49,24 +59,3 @@ FoodTruck.init(
 );
 
 module.exports = FoodTruck;
-
-// Tacosaurus Rex (Mexican food)
-// Wok This Way (Asian cuisine)
-// Mac Attack (Mac and Cheese)
-// The Fryin' Dutchman (Dutch food)
-// A Salt & Battery (Fish and chips)
-// The Rolling Cones (Ice cream)
-// The Grilled Cheese Incident (Grilled cheese sandwiches)
-// Frying Nemo (Seafood)
-// Holy Crepe! (French crepes)
-// Wrap Battle (Wraps)
-// Rolling Stromboli (Italian cuisine)
-// Meat the Press (Paninis)
-// Falafel to the Chief (Middle Eastern food)
-// The Rolling Doughnut (Donuts)
-// The Gumbo Mobile (Cajun food)
-// The Mighty Corn Dog (Corn dogs)
-// Bao to the Bone (Bao buns)
-// The Wiener Wagon (Hot dogs)
-// Eggcellent Eats (Breakfast food)
-// Rolling in the Dough (Pizza)

@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const { FoodTruck, User, MenuItem } = require('../models');
 const withAuth = require('../utils/auth');
+const searchRoute = require('./api/searchRoute');
+const { getUserCoordinates } = require('./controllers/UserController');
+
 
 // route to get all food trucks when the application is booted up
 router.get('/', async (req, res) => {
@@ -102,3 +105,12 @@ router.get('/menu', async (req, res) => {
 
 module.exports = router;
 
+
+// A route to get the user's coordinates 
+router.get('/user-coordinates', getUserCoordinates);
+
+
+
+
+
+module.exports = router;

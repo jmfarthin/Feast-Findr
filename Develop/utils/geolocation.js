@@ -1,73 +1,45 @@
-/* This first part is what allows us to grab the part of the window and show or hide the modal made for the
-geolocation part. Consider this a code snippet that can be moved somewhere else.
- We still have to go back and see how it ties with the map api but wanted to show how it could work based on what I read online*/
+// This will import the fetch method
 
-document.addEventListener("DOMContentLoaded", function() {
-    const locationModal = document.getElementById("locationModal");
-    const locationAllow = document.getElementById("locationAllow");
-    const locationDeny = document.getElementById("locationDeny");
-    
-    // This allows us to actually show what the location is or hide it by changing display properties 
-  
-    function showLocationModal()   {
-      locationModal.style.display = "block"  ;
-      }
-  
-    function hideLocationModal() {
-      locationModal.style.display = "none";
-    }
-  
-    // This first function stores users long and lat as variables if the geolocation call a success
+const fetch = require('node-fetch');
+const geolib = require('geolib');
 
-    function handleLocationSuccess(position) {
-      const latitude = position.coords.latitude;
-      const longitude = position.coords.longitude;
-      
-    }
-  //This one runs if they can't ge the location info
+//this formula takes the address and passes it into the api parameters to geocode the string address and return the resulting coordinates
+const convertAddressToCoordinates = async (address) => {
+  const apiKey = 'e67eaf040010438d8c6b339939fdd6ea';
+  const url = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(address)}&key=${apiKey}`;
 
-    function handleLocationError() {
-      // Handle location access errors
-      console.log("Error getting the user's location.");
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    if (data.results.length === 0) {
+      throw new Error('No coordinates found for the provided address');
     }
 
-  // The main function to use the geolocation method of the broswer navigator and return the user's coordinates
-    function getUserLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(handleLocationSuccess, handleLocationError);
-      } else {
-        // Geolocation is not supported by the browser
-        console.log("Geolocation is not supported by this browser.");
-      }
-    }
-  
-    locationAllow.addEventListener("click", () => {
-      hideLocationModal();
-      getUserLocation();
-    });
-  
-    locationDeny.addEventListener("click", () => {
-      hideLocationModal();
-    });
-  
-    showLocationModal();
-  });
+    const { lat, lng } = data.results[0].geometry;
+
+    console.log(lat, lng)
+    return { latitude: lat, longitude: lng };
+  } catch (error) {
+    console.error('Error converting address to coordinates:', error.message);
+    return null;
+  }
+};
+
+module.exports = {
+  convertAddressToCoordinates,
+};
+
+const location1 = '490 Roaring fork lake rd';
+const location2 = '2240 Burton Lake Rd'
 
 
-//   <!--Export This HTML For the Sectiona and buttons To Handle The User Geolocation Request---->
-
-
-<div id="locationModal" class="modal">
-  <div class="modal-content">
-    
-    <h4>Share Your Location</h4>
-
-    <p>Please allow us to get your location to find food trucks near you.</p>
-  </div>
-  <div class="modal-footer">
-    
-    <button id="locationAllow" class="btn">Allow</button>
-    <button id="locationDeny" class="btn">Deny</button>
-  </div>
-</div>
-  
+const checkDistance = async (first, second) => {
+  const home = await convertAddressToCoordinates(first)
+  const foodTruck = await (convertAddressToCoordinates(second));
+  const distance = geolib.getDistance(home, foodTruck);
+  const mileDistance = distance * 0.000621;
+  console.log(mileDistance);
+  return mileDistance;
+}
+checkDistance(location1, location2);
