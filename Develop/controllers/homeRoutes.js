@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Project, User, MenuItem } = require('../models');
 const withAuth = require('../utils/auth');
 
 // route to get all food trucks when the application is booted up
@@ -27,9 +27,9 @@ router.get('/truck/:id', async (req, res) => {
 });
 
 // A route to take signed in users to their profile page
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/profile', async (req, res) => {
     const userFoodTruck = await FoodTruck.findByPk(req.user.id,{
-        include: [{model: }]
+        include: [{model: MenuItem}]
       })
     
       if (userFoodTruck) {
