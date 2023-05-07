@@ -12,23 +12,17 @@ document
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('search-form');
-    const newSearchButton = document.getElementById('new-search');
     const addressForm = document.getElementById('address-form');
+    const userAddress = document.getElementById('user-address');
+    const newSearchButton = document.getElementById('new-search');
     const resultDiv = document.getElementById('result');
-    const foodTrucksDiv = document.getElementById('food-trucks');
+    const foodTrucksDiv = document.getElementById('food-truck-list');
   
-     form.addEventListener('submit', async (event))
+     addressForm.addEventListener('submit', async (event))
 
    event.preventDefault();
 
-  const street = form.street.value.trim();
-  const city = form.city.value.trim();
-  const state = form.state.value.trim();
-  const zipCode = form.zipCode.value.trim();
-
-  const fullAddress = `${street}, ${city}, ${state}` + (zipCode ? `, ${zipCode}` : '');
-  const userCoordinates = await getUserCoordinates(fullAddress);
+  const userCoordinates = await getUserCoordinates(userAddress);
 
   if (userCoordinates) {
     const foodTrucks = await findNearbyFoodTrucks(userCoordinates);

@@ -1,8 +1,9 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Project, User, MenuItem } = require('../models');
 const withAuth = require('../utils/auth');
 const searchRoute = require('./api/searchRoute');
 const { getUserCoordinates } = require('./controllers/UserController');
+
 
 // route to get all food trucks when the application is booted up
 router.get('/', async (req, res) => {
@@ -29,14 +30,21 @@ router.get('/truck/:id', async (req, res) => {
 });
 
 // A route to take signed in users to their profile page
-router.get('/profile', withAuth, async (req, res) => {
-    // try {
+router.get('/profile', async (req, res) => {
+    const userFoodTruck = await FoodTruck.findByPk(req.user.id,{
+        include: [{model: MenuItem}]
+      })
+    
+      if (userFoodTruck) {
 
-    // } catch (err) {
-    //     res.status(500).json(err);
-    // }
+        res.json(userFoodTruck);
+
+    } else {
+        res.status(404).json({ message: 'Food truck not found for the current user' });
+    }
 
     res.render("profile", {
+        userFoodTruck
     })
 });
 
@@ -47,6 +55,8 @@ router.get('/login', (req, res) => {
     })
 });
 
+// A route that will allow the user to find the closest nearby food trucks with Opencage, passing it through geolib
+router.post('/search', searchRoute.findNearbyFoodTrucks);
 router.get('/truck', (req, res) => {
     res.render('truck');
 });
