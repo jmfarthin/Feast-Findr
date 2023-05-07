@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { FoodTruck } = require('../../models');
 const withAuth = require('../../utils/auth');
-const opencage = require('opencage-api-client');
+const {covertAddressToCoordinates } = require ('../../utils/geolocation');
 
 // A route for creating a food truck
 router.post('/', withAuth, async (req, res) => {
@@ -28,8 +28,8 @@ router.put('/:id', withAuth, async (req, res) => {
             contact_info: req.body.contact_info,
             social_media_links: req.body.social_media_links,
             address:req.body.address,
-            lat:req.body.lat,
-            lng:req.body.long,
+            latitude:req.body.latitude,
+            longitude:req.body.longitude,
 
         },
         {
@@ -65,3 +65,5 @@ router.delete('/:id', withAuth, async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+module.exports = router;

@@ -1,21 +1,21 @@
-{{> header }}
-
 <!-- Homepage Content -->
 <section class="hero">
   <div class="hero-body">
     <div class="container">
       <div class="columns is-vcentered">
-        <div class="column">
-          <h1 class="title">
-            MOBILE MUNCHIES MADE EASY
-          </h1>
-          <p class="subtitle">
-            FeastFindr is a mobile app that helps you locate your favorite food trucks on the go. Our mission is to provide foodies with an easy and convenient way to satisfy their cravings and discover new mobile eats.
-          </p>
+        <div class="column content-container">
+          <h2 class="text-burnt-orange search-title">FIND YOUR FLAVOR</h2>
+          <p class="text-dark-blue">FeastFindr is a mobile app that helps you locate your favorite food trucks on the go. Our mission is to provide foodies with an easy and convenient way to satisfy their cravings and discover new mobile eats.</p>
+
+          <form id="search-form" action="/food-truck" method="GET" class="form-container content-container">
+            <input class="search-field border-burnt-orange" type="text" id="location" name="location" aria-label="Enter your location" placeholder="Enter your city" required>
+            <button class="search-btn brand-font bg-dark-blue text-light-blue" type="submit">SEARCH</button>
+          </form>
         </div>
+
         <div class="column">
           <figure>
-            <img src="#" alt="Hero image">
+            <img src="./images/FeastFindr-Hero.png" alt="Hero image">
           </figure>
         </div>
       </div>
@@ -23,19 +23,24 @@
   </div>
 </section>
 
-<section class="section">
-    <div class="columns">
+<section class="section no-padding-section">
+    <div class="columns no-padding-columns">
         <!-- Image on left -->
-        <div class="column is-half">
+        <div class="column is-half no-margin-padding">
             <figure class="image is-1by1">
-                <img src="#" alt="placeholder">
+                <img src="./images/food-truck-owner.png" alt="placeholder">
             </figure>
         </div>
         <!-- Content on the right -->
         <div class="column is-half bg-burnt-orange">
-            <div class="content has-text-centered">
-                <h2 class="title">FIND YOUR FLAVOR</h2>
-                <p>Delicious food for every mood.</p>
+            <div class="content has-text-centered owner-container">
+              <div class="inner-container">
+                <h1 class="brand-font truck-owner-title">
+                  FOOD TRUCK FAME AWAITS
+                </h1>
+                <p class="subtitle truck-owner-p">
+                   Attract more customers and boost your sales by signing up with FeastFindr! Our platform showcases your food truck, making it easier for food lovers to discover and enjoy your delicious creations. Don't miss out on this opportunity to grow your business and become a go-to choice for mobile food enthusiasts in your area.
+                </p>
 
                  <form id="search-form">
         <label for="street">Street:</label>
@@ -49,6 +54,10 @@
         <button type="submit">Find Food Trucks Near You!</button>
     </form>
     <div id="food-truck-list"></div>
+                <form id="search-form2" action="/login" method="GET" class="form-container content-container">
+                  <button class="signup-btn search-btn brand-font bg-dark-blue text-light-blue btn-hover" type="submit">SIGN UP</button>
+                </form>
+              </div>
             </div>
         </div>
     </div>
@@ -57,32 +66,32 @@
 <!-- Testimonials section -->
 <section class="section">
   <div class="container">
-    <h2 class="title has-text-centered">What our customers say</h2>
+    <h2 class="title has-text-centered brand-font review-title">WHAT OUR CUSTOMERS SAY</h2>
     <div class="columns">
       <!-- Testimonial 1 -->
       <div class="column">
         <div class="card">
           <div class="card-image">
-            <figure class="image is-128x128 is-rounded is-centered">
-              <img src="#" alt="Customer 1 photo">
+            <figure class="image is-160x160 is-rounded centered-image round-prof">
+              <img src="./images/FF-Peter.png" alt="Customer 1 photo">
             </figure>
           </div>
           <div class="card-content">
-            <div class="content">
-              <p>"Customer 1 review comment."</p>
-              <span class="icon has-text-warning">
+            <div class="content has-text-centered">
+              <p class="review-p">"FeastFindr has helped us stand out in a competitive market. The increased visibility and user-friendly platform makes it simple for food lovers to discover our unique culinary creations. It's been an invaluable asset to our growth!" - Peter, Gourmet Grilled Cheese Co.</p>
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
-              <span class="icon has-text-warning">
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
-              <span class="icon has-text-warning">
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
-              <span class="icon has-text-warning">
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
-              <span class="icon has-text-warning">
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
             </div>
@@ -93,26 +102,26 @@
       <div class="column">
         <div class="card">
           <div class="card-image">
-            <figure class="image is-128x128 is-rounded is-centered">
-              <img src="path/to/customer2.jpg" alt="Customer 2 photo">
+            <figure class="image is-160x160 is-rounded centered-image round-prof">
+              <img src="./images/FF-James.png" alt="Customer 2 photo">
             </figure>
           </div>
           <div class="card-content">
-            <div class="content">
-              <p>"Customer 2 review comment."</p>
-              <span class="icon has-text-warning">
+            <div class="content has-text-centered">
+              <p class="review-p">"FeastFindr has been a game changer for our food truck. Our customer base has grown significantly, and the app makes it so easy for them to find us. Highly recommended for any food truck owner!" - James, Smokey BBQ Haven</p>
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
-              <span class="icon has-text-warning">
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
-              <span class="icon has-text-warning">
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
-              <span class="icon has-text-warning">
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
-              <span class="icon has-text-warning">
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
             </div>
@@ -123,24 +132,33 @@
       <div class="column">
         <div class="card">
           <div class="card-image">
-            <figure class="image is-128x128 is-rounded is-centered">
-              <img src="path/to/customer3.jpg" alt="Customer 3 photo">
+            <figure class="image is-160x160 is-rounded centered-image round-prof">
+              <img src="./images/FF-Laura.png" alt="Customer 3 photo">
             </figure>
           </div>
           <div class="card-content">
-            <div class="content">
-              <p>"Customer 3 review comment."</p>
-              <span class="icon has-text-warning">
+            <div class="content has-text-centered">
+              <p class="review-p">"Since joining FeastFindr, we've seen a surge in foot traffic and sales. The app provides great exposure and helps us connect with our target audience. It's an essential tool for our business!" - Laura, Tasty Tacos Express</p>
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
-              <span class="icon has-text-warning">
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
-              <span class="icon has-text-warning">
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
-              <span class="icon has-text-warning">
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
-              <span class="icon has-text-warning">
+              <span class="icon star-color">
                 <i class="fas fa-star"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="/js/homepage.js"></script>

@@ -1,6 +1,6 @@
 [
     {
-        "name": "Los Tacos Locos",
+        "name": "Tacosaurus Rex",
         "cuisine": "Mexican",
         "description": "Authentic tacos made with fresh ingredients.",
         "image": "https://example.com/taco-truck.jpg",
@@ -120,3 +120,5 @@
         }
     }
 ]
+
+

@@ -13,38 +13,20 @@
     <link rel="stylesheet" href="../public/css/mystyles.css">
 </head>
 
-    <section class="section">
-        <div class="container">
-          <div class="tile is-ancestor">
-            <div class="tile is-4 is-vertical is-parent">
-              <div class="flip-wrapper">
-                <input type="checkbox" id="toggle-1">
-                <label class="tile is-child flip-tile" for="toggle-1">
-                  <div class="flip-tile-front box">
-                    <p class="title">One</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                  </div>
-                  <div class="flip-tile-back box has-background-primary">
-                    <h4 class="title">BACK of Card</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                  </div>
-                </label>
-              </div>
-      
-              <div class="flip-wrapper bottom">
-                <input type="checkbox" id="toggle-2">
-                <label class="tile is-child flip-tile" for="toggle-2">
-                  <div class="flip-tile-front box">
-                    <p class="title">Two</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                  </div>
-                  <div class="flip-tile-back box is-primary">
-                    <h4 class="title">BACK of Card Two</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                  </div>
-                </label>
-              </div>
-      
+<div class="tile is-ancestor">
+  {{#each data}}
+  <div class="tile is-parent is-4">
+     <div class="tile is-parent">
+        <div class="flip-wrapper">
+          <input type="checkbox" id="toggle-1">
+          <label class="tile is-child flip-tile" for="toggle-1">
+            <div class="flip-tile-front box">
+              <p class="title">One</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
             </div>
-        </div>
+            <div class="flip-tile-back box has-background-primary">
+              <h4 class="title">BACK of Card</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            </div>
+          </label>
         </div>
