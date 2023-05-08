@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const { FoodTruck } = require('../../models');
+const { FoodTruck, MenuItem } = require('../../models');
 const withAuth = require('../../utils/auth');
-const {covertAddressToCoordinates } = require ('../../utils/geolocation');
+const { convertAddressToCoordinates, checkDistance } = require('../../utils/geolocation');
 
 // A route for creating a food truck
 router.post('/', async (req, res) => {
@@ -15,12 +15,13 @@ router.post('/', async (req, res) => {
     }
 });
 
+// find food truck by ID
 router.get('/:id', async (req, res) => {
     try {
         const foodTruck = await FoodTruck.findByPk(req.params.id);
         res.status(200).json(foodTruck);
     } catch (error) {
-        res.status(400).json(err);
+        res.status(400).json(error);
     }
 })
 
@@ -34,9 +35,9 @@ router.put('/:id', withAuth, async (req, res) => {
             image: req.body.image,
             contact_info: req.body.contact_info,
             social_media_links: req.body.social_media_links,
-            address:req.body.address,
-            latitude:req.body.latitude,
-            longitude:req.body.longitude,
+            address: req.body.address,
+            latitude: req.body.latitude,
+            longitude: req.body.longitude,
 
         },
             {
@@ -73,22 +74,21 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
 });
 
-const getFoodTruckById = async (req, res) => {
-    const { id } = req.params;
-  
-    try {
-      const selectedFoodTruck = await FoodTruck.findByPk(id);
-  
-      if (!selectedFoodTruck) {
-        return res.status(404).json({ error: 'Food truck not found' });
-      }
-  
-      res.status(200).json(selectedFoodTruck);
-    } catch (error) {
-      res.status(500).json({ error: 'An error occurred while fetching the food truck' });
-    }
-  };
-  
+// const getFoodTruckById = async (req, res) => {
+//     const { id } = req.params;
 
-module.exports ={ router,
-getFoodTruckById};
+//     try {
+//       const selectedFoodTruck = await FoodTruck.findByPk(id);
+
+//       if (!selectedFoodTruck) {
+//         return res.status(404).json({ error: 'Food truck not found' });
+//       }
+
+//       res.status(200).json(selectedFoodTruck);
+//     } catch (error) {
+//       res.status(500).json({ error: 'An error occurred while fetching the food truck' });
+//     }
+//   };
+
+
+module.exports = router;

@@ -40,13 +40,6 @@ FoodTruck.init(
         },
         address: {
             type: DataTypes.STRING,
-        },
-        latitude: {
-            type: DataTypes.FLOAT,
-
-        },
-        longitude: {
-            type: DataTypes.FLOAT,
         }
     },
     {
