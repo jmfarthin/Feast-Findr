@@ -18,7 +18,7 @@ const convertAddressToCoordinates = async (address) => {
 
     const { lat, lng } = data.results[0].geometry;
 
-    console.log(lat, lng)
+    // console.log(lat, lng)
     return { latitude: lat, longitude: lng };
   } catch (error) {
     console.error('Error converting address to coordinates:', error.message);
@@ -26,20 +26,19 @@ const convertAddressToCoordinates = async (address) => {
   }
 };
 
-module.exports = {
-  convertAddressToCoordinates,
-};
+
 
 const location1 = '490 Roaring fork lake rd';
 const location2 = '2240 Burton Lake Rd'
 
 
-const checkDistance = async (first, second) => {
-  const home = await convertAddressToCoordinates(first)
-  const foodTruck = await (convertAddressToCoordinates(second));
-  const distance = geolib.getDistance(home, foodTruck);
+const checkDistance = (user, truck) => {
+  const distance = geolib.getDistance(user, truck);
   const mileDistance = distance * 0.000621;
   console.log(mileDistance);
   return mileDistance;
 }
-checkDistance(location1, location2);
+
+module.exports = {
+  convertAddressToCoordinates, checkDistance
+};

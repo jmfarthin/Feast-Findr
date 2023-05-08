@@ -1,33 +1,38 @@
+const router = require('express').Router();
+const { FoodTruck, MenuItem } = require('../../models');
+const { convertAddressToCoordinates, checkDistance } = require('../../utils/geolocation');
 
-const FoodTruck = require('../models/FoodTruck');
-const { convertAddressToCoordinates } = require('../../utils/geolocation');
-const geolib = require('geolib');
 
-const findNearbyFoodTrucks = async (req, res) => {
-  const { address } = req.body;
-  const coordinates = await convertAddressToCoordinates(address);
+// Route to search for closest food trucks
 
-  if (!coordinates) {
-    return res.status(400).json({ error: 'Unable to find coordinates for the provided address' });
-  }
-
+router.get('/', async (req, res) => {
+  const trucks = [];
   try {
-    const foodTrucks = await FoodTruck.findAll();
-    const nearbyFoodTrucks = foodTrucks.filter((truck) => {
-      const distance = geolib.getDistance(
-        { latitude: coordinates.latitude, longitude: coordinates.longitude },
-        { latitude: truck.latitude, longitude: truck.longitude }
-      );
+    const address = req.query.address;
+    const userCoordinates = await convertAddressToCoordinates(address);
+    const truckData = await FoodTruck.findAll({ include: [MenuItem] });
 
-      return distance <= 25 * 1609; // 25 miles to meters
-    });
+    // find closest foodtrucks
+    for (const truck of truckData) {
+      const truckCoordinates = await convertAddressToCoordinates(truck.address);
+      if (!truckCoordinates) {
+        continue;
+      }
+      const distance = checkDistance(userCoordinates, truckCoordinates);
 
-    res.status(200).json(nearbyFoodTrucks);
+      if (distance < 20) {
+        trucks.push(truck);
+      };
+    };
+
+    const plainTrucks = trucks.map(truck => truck.get({ plain: true }));
+    console.log(plainTrucks);
+
+    res.render('results');
   } catch (error) {
-    res.status(500).json({ error: 'An error occurred while searching for nearby food trucks' });
+    res.status(400).json({ error });
   }
-};
+});
+module.exports = router;
 
-module.exports = {
-  findNearbyFoodTrucks,
-};
+// { trucks: plainTrucks }

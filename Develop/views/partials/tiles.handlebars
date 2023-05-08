@@ -1,32 +1,30 @@
-
 <body>
-  <section class="section">
-    <div class="container">
-        <div class="flip-tile">
-            <div class="flip-tile-inner">
-                <div class="flip-tile-front tile is-child box">
-                    <h1 class="title tile-content has-text-centered">{{truck.name}}</h1>
-                    <figure class="image is-128x128 has-text-centered">
-                        <img class="is-rounded" src="{{truck.image}}" alt="Food truck profile picture">
-                    </figure>
-                    <p class="subtitle has-text-centered tile-content">Click to see menu</p>
-                </div>
-                <div class="flip-tile-back tile is-child box">
-                    <h1 class="title has-text-centered">Menu</h1>
-                    <div class="content">
-                        <ul>
-                            {{#each truck.menu}}
-                            <li>
-                                <p class="title is-5 tile-content">{{this.name}}</p>
-                                <p class="subtitle is-6 tile-content">Price: ${{this.price}}</p>
-                            </li>
-                            {{/each}}
-                        </ul>
+    <section class="section">
+        <div class="container">
+            <div class="flip-tile">
+                <div class="flip-tile-inner">
+                    <div class="flip-tile-front tile is-child box">
+                        <h1 class="title tile-content has-text-centered">{{truck.name}}</h1>
+                        <figure class="image is-128x128 has-text-centered">
+                            <img class="is-rounded" src="{{truck.image}}" alt="Food truck profile picture">
+                        </figure>
+                        <p class="subtitle has-text-centered tile-content">Click to see menu</p>
+                    </div>
+                    <div class="flip-tile-back tile is-child box">
+                        <h1 class="title has-text-centered">Menu</h1>
+                        <div class="content">
+                            <ul>
+                                {{#each truck.menu-item as |item|}}
+                                <li>
+                                    <p class="title is-5 tile-content">{{item.name}}</p>
+                                    <p class="subtitle is-6 tile-content">Price: ${{item.price}}</p>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 </body>
-
