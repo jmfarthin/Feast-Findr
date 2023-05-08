@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, MenuItem } = require('../../models');
 
 // Creating a new user
 router.post('/', async (req, res) => {
@@ -58,6 +58,24 @@ router.post('/logout', async (req, res) => {
       } else {
         res.status(404).end();
       }
+});
+
+router.get(`/foodTruck`, (req, res) => {
+  const foodTruck = {
+    name: `Food truck name`,
+    picture: `path/to/picture`,
+    menuItems: [
+      {
+        name:"food",
+        price:"$4.00"
+      },
+      {
+        name:"food 2",
+        price:"$11.00"
+      }
+    ]
+  };
+  res.render('profile', {foodTruck});
 });
 
 module.exports = router;
