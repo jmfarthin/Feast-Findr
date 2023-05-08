@@ -9,11 +9,14 @@ const searchFoodTruckHandler = async (event) => {
     event.preventDefault()
     try {
       const address = document.getElementById('address').value
-        const response = await fetch(`/api/foodTruck?address=${address}`);
+        const response = await fetch(`/api/results?address=${address}`);
 
-        if (!response.ok) {
-            alert('Search failed, try again!')
-        }
+        if (response.ok) {
+          window.location.href = '/api/results'; // Redirect to the results page
+      } else {
+          alert('Search failed, try again!');
+      }
+
     } catch (error) {
         console.log(error);
     }
