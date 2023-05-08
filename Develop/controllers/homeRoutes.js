@@ -53,6 +53,10 @@ router.get('/login', (req, res) => {
     })
 });
 
+// A route that will allow the user to find the closest nearby food trucks with Opencage, passing it through geolib
+router.post('/search', searchRoute.findNearbyFoodTrucks);
+router.get('/truck', (req, res) => {
+    res.render('truck');
 router.get('/truck', withAuth, async (req, res) => {
 
     try {
