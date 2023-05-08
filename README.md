@@ -49,12 +49,18 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 This project was built by: 
 
 Justin Farthing https://github.com/jmfarthin
+<br>
 Reggie Mosley   https://github.com/RMosley912
+<br>
 Nnamdi Onyeije  https://github.com/nnamdionyeije
+<br>
 Derek Sutton    https://github.com/dereksutton
+<br>
 Wyatt Otto      https://github.com/wyattotto
+<br>
 
 Credit to Unsplash   (https://unsplash.com/) for photos featured in the app.
+<br>
 Credit to Midjourney (https://www.midjourney.com/home/?callbackUrl=%2Fapp%2F) for Truck logo designs.
 
 ## License
@@ -76,7 +82,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 This app serves two clients : 1. Adventurous diners 2. The food trucks that serve them.
 
 For the diners, they can hop on Feast-Findr, put in their address, and receive a list of food trucks within a 25 mile radius.
-They can then select and view info on the food trucks
+They can then select and view info on the food trucks.
+
 
 For the food truck owners, they can create a profile and add their food truck. The truck's name, type of cuisine, logo, menu 
 and location are all displayed to the user when selected. 
@@ -90,9 +97,13 @@ If you have a suggestion that would imrpove the app's functionality, feel free t
 You can also open an issue on the main branch. Please be as descriptive as possible as for the idea/issue and any potential solution.
 
 Fork the Project
+<br>
 Create your Feature Branch (ex. git checkout -b feature/MyNewFeature)
+<br>
 Commit your Changes (git commit -m 'Added MyNewFeature')
+<br>
 Push to the Branch (git push origin feature/MyNewFeature)
+<br>
 Open a Pull Request
 
 ## Tests
