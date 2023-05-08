@@ -3,7 +3,7 @@
         "name": "Tacosaurus Rex",
         "cuisine": "Mexican",
         "description": "Authentic tacos made with fresh ingredients.",
-        "image": "https://example.com/taco-truck.jpg",
+        "image": "/images/TacosaurusRex-Logo.png",
         "contact_info": "123-456-7890",
         "social_media_links": {
             "twitter": "https://twitter.com/taco_truck",
@@ -20,7 +20,7 @@
         "name": "The Pizza Wagon",
         "cuisine": "Italian",
         "description": "Delicious wood-fired pizzas made to order.",
-        "image": "https://example.com/pizza-truck.jpg",
+        "image": "/images/PizzaWagon-Logo.png",
         "contact_info": "123-456-7890",
         "social_media_links": {
             "twitter": "https://twitter.com/pizza_truck",
@@ -35,7 +35,7 @@
         "name": "Burgers on Wheels",
         "cuisine": "American",
         "description": "Juicy burgers and fries cooked to perfection.",
-        "image": "https://example.com/burger-truck.jpg",
+        "image": "/images/BurgersOnWheels-Logo.png",
         "contact_info": "123-456-7890",
         "social_media_links": {
             "twitter": "https://twitter.com/burger_truck",
@@ -50,7 +50,7 @@
         "name": "Rolling Sushi",
         "cuisine": "Japanese",
         "description": "Fresh sushi rolls made to order.",
-        "image": "https://example.com/sushi-truck.jpg",
+        "image": "/images/RollingSushi-Logo.png",
         "contact_info": "123-456-7890",
         "social_media_links": {
             "twitter": "https://twitter.com/sushi_truck",
@@ -66,7 +66,7 @@
         "name": "Smokin' Wheels BBQ",
         "cuisine": "American",
         "description": "Slow-cooked meats and classic sides.",
-        "image": "https://example.com/bbq-truck.jpg",
+        "image": "/images/SmokinWheelsBBQ-Logo.png",
         "contact_info": "123-456-7890",
         "social_media_links": {
             "twitter": "https://twitter.com/bbq_truck",
@@ -81,7 +81,7 @@
         "name": "Scoops on the Move",
         "cuisine": "Dessert",
         "description": "Handmade ice cream and frozen treats.",
-        "image": "https://example.com/ice-cream-truck.jpg",
+        "image": "/images/Scoops-Logo.png",
         "contact_info": "123-456-7890",
         "social_media_links": {
             "twitter": "https://twitter.com/ice_cream_truck",
@@ -96,7 +96,7 @@
         "name": "Thai Street Kitchen",
         "cuisine": "Thai",
         "description": "Authentic Thai dishes served hot and fresh.",
-        "image": "https://example.com/thai-truck.jpg",
+        "image": "/images/ThaiStreetKitchen-Logo.png",
         "contact_info": "123-456-7890",
         "social_media_links": {
             "twitter": "https://twitter.com/thai_truck",
@@ -111,7 +111,7 @@
         "name": "Cluck Truck",
         "cuisine": "American",
         "description": "Crispy fried chicken and all the fixings.",
-        "image": "https://example.com/chicken-truck.jpg",
+        "image": "/images/CluckTruck-Logo.png",
         "contact_info": "123-456-7890",
         "social_media_links": {
             "twitter": "https://twitter.com/chicken_truck",
@@ -126,7 +126,7 @@
         "name": "Veggie Wheels",
         "cuisine": "Vegetarian",
         "description": "Healthy and delicious vegetarian options.",
-        "image": "https://example.com/vegetarian-truck.jpg",
+        "image": "/images/VeggiesOnWheels-Logo.png",
         "contact_info": "123-456-7890",
         "social_media_links": {
             "twitter": "https://twitter.com/vegetarian_truck",
@@ -141,7 +141,7 @@
         "name": "Mediterranean Bites on Wheels",
         "cuisine": "Mediterranean",
         "description": "Fresh and flavorful Mediterranean dishes.",
-        "image": "https://example.com/mediterranean-truck.jpg",
+        "image": "/images/MediterraneanBites-Logo.png",
         "contact_info": "123-456-7890",
         "social_media_links": {
             "twitter": "https://twitter.com/mediterranean_truck",
