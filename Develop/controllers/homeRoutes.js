@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { FoodTruck, User, MenuItem } = require('../models');
 const withAuth = require('../utils/auth');
-const searchRoute = require('./api/searchRoute');
-const { getUserCoordinates } = require('./controllers/UserController');
 
 
 // route to get all food trucks when the application is booted up
@@ -32,9 +30,9 @@ router.get('/truck/:id', async (req, res) => {
 // A route to take signed in users to their profile page
 router.get('/profile', async (req, res) => {
     const userFoodTruck = await FoodTruck.findByPk(req.session.user_id, {
-        include: [{model: MenuItem}]
+        include: [{ model: MenuItem }]
     });
-    
+
     if (userFoodTruck) {
 
         res.json(userFoodTruck);
@@ -59,11 +57,11 @@ router.get('/truck', withAuth, async (req, res) => {
 
     try {
         const currentUser = await User.findByPk(req.session.user_id, {
-            attributes: { exclude: ['password']}
+            attributes: { exclude: ['password'] }
         });
-    
+
         const user = currentUser.get({ plain: true });
-    
+
         res.render('truck', {
             ...user,
             logged_in: true
@@ -71,8 +69,8 @@ router.get('/truck', withAuth, async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-    
-    
+
+
 });
 
 router.get('/menu', async (req, res) => {
@@ -91,9 +89,9 @@ router.get('/menu', async (req, res) => {
         //         .status(400)
         //         .json({message: 'Cannot find food truck'})
         // }
-    
+
         const truck = currentFoodTruck.get({ plain: true });
-    
+
         res.render('menu', {
             ...truck,
             logged_in: true
@@ -106,11 +104,11 @@ router.get('/menu', async (req, res) => {
 module.exports = router;
 
 
+
+
+
+
 // A route to get the user's coordinates 
-router.get('/user-coordinates', getUserCoordinates);
+// router.get('/user-coordinates', getUserCoordinates);
 
 
-
-
-
-module.exports = router;

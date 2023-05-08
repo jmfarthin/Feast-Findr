@@ -1,11 +1,10 @@
-// controllers/SearchController.js
 
 const FoodTruck = require('../models/FoodTruck');
 const { convertAddressToCoordinates } = require('../../utils/geolocation');
 const geolib = require('geolib');
 
-const findNearbyFoodTrucks = async (req, res) => {
-  const { address } = req.body;
+router.get = async (req, res) => {
+  const address  = req.body;
   const coordinates = await convertAddressToCoordinates(address);
 
   if (!coordinates) {
@@ -29,6 +28,6 @@ const findNearbyFoodTrucks = async (req, res) => {
   }
 };
 
-module.exports = {
-  findNearbyFoodTrucks,
-};
+// module.exports = {
+//   findNearbyFoodTrucks,
+// };
