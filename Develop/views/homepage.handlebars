@@ -2,14 +2,14 @@
 <section class="hero">
   <div class="hero-body">
     <div class="container">
-      <div class="columns is-vcentered">
+      <div class="columns is-centered">
         <div class="column content-container">
           <h2 class="text-burnt-orange search-title">FIND YOUR FLAVOR</h2>
           <p class="text-dark-blue">FeastFindr is a mobile app that helps you locate your favorite food trucks on the go. Our mission is to provide foodies with an easy and convenient way to satisfy their cravings and discover new mobile eats.</p>
+          <form id="search-form" class="form-container content-container">
+            <input class="search-field border-burnt-orange" type="text" id="address" name="address" aria-label="Enter your location" placeholder="Enter your Address" required>
+            <button class="search-btn brand-font bg-dark-blue text-light-blue" id="search-button" type="submit">SEARCH</button>
 
-          <form id="search-form" action="/food-truck" method="GET" class="form-container content-container">
-            <input class="search-field border-burnt-orange" type="text" id="location" name="location" aria-label="Enter your location" placeholder="Enter your city" required>
-            <button class="search-btn brand-font bg-dark-blue text-light-blue" type="submit">SEARCH</button>
           </form>
         </div>
 

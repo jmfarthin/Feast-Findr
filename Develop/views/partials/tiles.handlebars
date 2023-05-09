@@ -1,4 +1,4 @@
-<body>
+{{!-- <body>
     <section class="section">
         <div class="container">
             <div class="flip-tile">
@@ -26,6 +26,41 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
+    <div class="column is-half-tablet is-one-third-desktop">
+  <div class="card">
+  <header class="card-header1 has-text-centered">
+    <p class="card-header-title has-text-centered">
+      {{name}}
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left"></div>
+      <div class="media-right">
+        <figure class="image is-128x128">
+          <img class="is-rounded" src="{{image}}" alt="Food truck profile picture">
+        </figure>
+      </div>
+      <div class="media-content">
+        <h2 class="title is-4 has-text-centered">Menu</h2>
+        <div class="content">
+          <ul>
+           {{#each menu-items as |item|}}
+              <li>
+                <p class="title is-5">{{item.name}}</p>
+                <p class="subtitle is-6">Price: ${{item.price}}</p>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <a href="{{truck.address}}" class="card-footer-item">{{truck.address}}</a>
+  </footer>
+</div>
+</div>
     <script src="/js/tileflip.js"></script>
 </body>
