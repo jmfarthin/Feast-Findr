@@ -289,5 +289,9 @@ input[type="text"]::placeholder {
 }
 
 .card-header1{
-    color: #D95437;
+    color: #00d1b2 !important;
+}
+
+.custom-card{
+    background-color: #D95437 !important;
 }
