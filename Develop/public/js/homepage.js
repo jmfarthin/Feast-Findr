@@ -9,14 +9,15 @@ const searchFoodTruckHandler = async (event) => {
     event.preventDefault()
     try {
       const address = document.getElementById('address').value
-        const response = await fetch(`/api/results?address=${address}`);
+      const url = `/results/${address}`
+        // const response = await fetch(`/results/?address=${address}`);
 
-        if (response.ok) {
-          window.location.href = '/api/results'; // Redirect to the results page
-      } else {
-          alert('Search failed, try again!');
-      }
-
+      //   if (response.ok) {
+          window.location.href =url; // Redirect to the results page
+      // } else {
+      //     alert('Search failed, try again!');
+      // }
+      console.log(response);
     } catch (error) {
         console.log(error);
     }
