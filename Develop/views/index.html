@@ -10,67 +10,20 @@
     <link rel="stylesheet" href="/Develop/public/css/style.css">
     <link rel="stylesheet" href="/Develop/public/css/mystyles.css"
 </head>
-<!-- <body class="user-body">
-  <section class="section">
-    <div class="">
-        <div class="flip-tile ">
-            <div class="flip-tile-inner bg-light-blue">
-                <div class="flip-tile-front tile is-child box tile-front">
-                    <h1 class="title tile-content has-text-centered">{{foodTruck.name}}</h1>
-                    <figure class="image is-128x128 has-text-centered">
-                        <img class="is-rounded" src="{{foodTruck.profilePicture}}" alt="Food truck profile picture">
-                    </figure>
-                    <p class="subtitle has-text-centered tile-content">Click to see menu</p>
-                </div>
-                <div class="flip-tile-back tile is-child box tile-back">
-                    <h1 class="title has-text-centered">Menu</h1>
-                    <div class="content">
-                        <ul>
-                            {{#each foodTruck.menu}}
-                            <li>
-                                <p class="title is-5 tile-content">{{this.name}}</p>
-                                <p class="subtitle is-6 tile-content">Price: ${{this.price}}</p>
-                            </li>
-                            {{/each}}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-</body> -->
 <body class="user-body">
     <section class="section">
         <div class="container">
-            <div class="tile is-ancestor">
-                <div class="tile  is-vertical is-parent">
-                    <div class="tile is-child box left-tile">
-                        <h1 class="title has-text-centered">Wyatt Food Truck </h1>
-                        <figure class="image is-128x128 centered-image ">
-                            <img class="is-rounded" src="/Develop/public/images/BurgersOnWheels-Logo.png" alt="Food truck profile picture">
-                        </figure>
-                    </div>
-                </div>
-                <div class="tile is-parent">
-                    <div class="tile is-child box right-tile">
-                        <h1 class="title has-text-centered">Menu</h1>
-                        <div class="content">
-                            <ul>
-                                {{#each menu-items as |item|}}
-                                <li>
-                                    <p class="title is-5">{{item.name}}</p>
-                                    <p class="subtitle is-6">Price: ${{item.price}}</p>
-                                </li>
-                                {{/each}}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <h1 class="title has-text-centered results-title ">Your Flavor is Found!</h1>
+            <div class="tile is-ancestor is-flex-wrap-wrap">
+                {{#each trucks as |truck|}}
+                {{> tiles}}
+                {{/each}}
             </div>
         </div>
     </section>
-    <script src="/js/profile"></script>
+    <script src="/js/tileflip.js"></script>
 </body>
+
+</html>
 
  <script src="/Develop/public/js/tileflip.js"></script>
