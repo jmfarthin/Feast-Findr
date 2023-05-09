@@ -319,6 +319,17 @@ input[type="text"]::placeholder {
     margin-right: auto;
     width: 8%;
     text-align: center;
-    
-    /* margin-right: auto; */
+}
+
+.centered-update {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.form-group1 {
+    margin-top: 10px;
 }

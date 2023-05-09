@@ -28,7 +28,7 @@ const truckFormHandler = async (event) => {
     if (name && cuisine && description && contact_info && address) {
         // Send a POST request to the API endpoint
         try {
-            console.log(JSON.stringify(newTruck));
+            // console.log(JSON.stringify(newTruck));
             const response = await fetch('/api/foodTruck', {
                 method: 'POST',
                 body: JSON.stringify(newTruck),

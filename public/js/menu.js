@@ -84,7 +84,7 @@ const menuFormHandler = async (event) => {
 
     // send menu
     try {
-        console.log(JSON.stringify(menuItems));
+        // console.log(JSON.stringify(menuItems));
         const response = await fetch('/api/menu', {
             method: 'POST',
             body: JSON.stringify(menuItems),
@@ -96,7 +96,7 @@ const menuFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            console.log(JSON.stringify(menuItems));
+            // console.log(JSON.stringify(menuItems));
             // If successful, redirect the browser to the user profile page
             document.location.replace('/profile');
         } else {
