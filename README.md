@@ -35,14 +35,18 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Usage
 
-To use Feast-Findr, navigate to
-Provide instructions and examples for use. Include screenshots as needed.
+To use Feast-Findr, navigate to https://protected-mesa-32753.herokuapp.com/. Use the address search to find food trucks close to you. If you are a food truck owner, click the sign up/login button to create an account to showcase your food truck and menu.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+![FeastFindr1](./public/images/FeastFindr1.png)
+![FeastFindr2](./public/images/FeastFindr2.png)
+![FeastFindr3](./public/images/FeastFindr3.png)
+![FeastFindr4](./public/images/FeastFindr4.png)
+![FeastFindr5](./public/images/FeastFindr5.png)
+![FeastFindr6](./public/images/FeastFindr6.png)
+![FeastFindr7](./public/images/FeastFindr7.png)
+![FeastFindr8](./public/images/FeastFindr8.png)
+![FeastFindr9](./public/images/FeastFindr9.png)
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## Credits
 
