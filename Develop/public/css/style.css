@@ -275,3 +275,6 @@ input[type="text"]::placeholder {
     background-color: #D95437;
 }
 
+.results-title {
+    color: #D95437 !important;
+}
