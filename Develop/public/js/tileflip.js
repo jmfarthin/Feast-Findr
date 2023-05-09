@@ -30,9 +30,24 @@ async function directionsButtonEventListener(button) {
   });
 }
 
+const getDirectionHandler = async (event) => {
+  // event.stopPropagation();
+  if (event.target.hasAttribute('truck-address')) {
+    console.log("test value")
+    const truckAddress = event.target.getAttribute('truck-address');
+    window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(truckAddress)}`, '_blank');
+  }
+}
+
+
 // Attach event listeners
 attachFlipEventListeners();
 
 directionButtons.forEach((button) => {
   directionsButtonEventListener(button);
 });
+
+
+document
+  .querySelector('.container')
+  .addEventListener('click', getDirectionHandler);

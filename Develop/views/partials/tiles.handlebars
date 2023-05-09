@@ -26,12 +26,12 @@
                                 {{/each}}
                             </ul>
                         </div>
-                        <button class="button directions-button" data-truck-id="{{id}}">Get Directions</button>
+                        {{!-- <button class="button directions-button" data-truck-id="{{id}}" truck-address="{{address}}">Get Directions</button> --}}
                     </div>
                 </div>
             </div>
             <footer class="card-footer">
-                <a href="{{truck.address}}" class="card-footer-item">{{truck.address}}</a>
+                <a href="https://www.google.com/maps/search/?api=1&query={{address}}" target="_blank" class="card-footer-item">{{address}}</a>
             </footer>
         </div>
     </div>
