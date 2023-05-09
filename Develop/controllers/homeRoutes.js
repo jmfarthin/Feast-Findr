@@ -50,6 +50,7 @@ router.get('/profile', async (req, res) => {
 
     res.render("profile", {
         ...foodTruck,
+        logged_in: true
     })
 });
 
