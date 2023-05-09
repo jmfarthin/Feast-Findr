@@ -5,7 +5,7 @@ const geolib = require('geolib');
 
 //this formula takes the address and passes it into the api parameters to geocode the string address and return the resulting coordinates
 const convertAddressToCoordinates = async (address) => {
-  const apiKey = 'e67eaf040010438d8c6b339939fdd6ea';
+  const apiKey = process.env.KEY;
   const url = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(address)}&key=${apiKey}`;
 
   try {

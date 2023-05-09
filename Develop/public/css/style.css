@@ -25,6 +25,12 @@
     font-family: 'Secular One', sans-serif;
 }
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+}
+
 .search-title {
     margin: 0 0 4% 0;
 }
