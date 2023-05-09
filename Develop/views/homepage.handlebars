@@ -5,17 +5,13 @@
       <div class="columns is-centered">
         <div class="column content-container">
           <h2 class="text-burnt-orange search-title">FIND YOUR FLAVOR</h2>
-          <p class="text-dark-blue">FeastFindr is a mobile app that helps you locate your favorite food trucks on the
-            go. Our mission is to provide foodies with an easy and convenient way to satisfy their cravings and discover
-            new mobile eats.</p>
-
+          <p class="text-dark-blue">FeastFindr is a mobile app that helps you locate your favorite food trucks on the go. Our mission is to provide foodies with an easy and convenient way to satisfy their cravings and discover new mobile eats.</p>
           <form id="search-form" class="form-container content-container">
             <input class="search-field border-burnt-orange" type="text" id="address" name="address" aria-label="Enter your location" placeholder="Enter your Address" required>
             <button class="search-btn brand-font bg-dark-blue text-light-blue" id="search-button" type="submit">SEARCH</button>
+
           </form>
         </div>
-
-        {{!-- action="/food-truck" method="GET" --}}
 
         <div class="column">
           <figure>
@@ -28,46 +24,31 @@
 </section>
 
 <section class="section no-padding-section">
-  <div class="columns no-padding-columns">
-    <!-- Image on left -->
-    <div class="column is-half no-margin-padding">
-      <figure class="image is-1by1">
-        <img src="./images/food-truck-owner.png" alt="placeholder">
-      </figure>
-    </div>
-    <!-- Content on the right -->
-    <div class="column is-half bg-burnt-orange">
-      <div class="content has-text-centered owner-container">
-        <div class="inner-container">
-          <h1 class="brand-font truck-owner-title">
-            FOOD TRUCK FAME AWAITS
-          </h1>
-          <p class="subtitle truck-owner-p">
-            Attract more customers and boost your sales by signing up with FeastFindr! Our platform showcases your food
-            truck, making it easier for food lovers to discover and enjoy your delicious creations. Don't miss out on
-            this opportunity to grow your business and become a go-to choice for mobile food enthusiasts in your area.
-          </p>
-
-          {{!-- <form id="address-form">
-            <label for="address">Please Fill In Your Address:</label>
-            <input type="text" id="user-address" placeholder="Ex: 1600 Pennsylvania Ave. Washington DC" name="address"
-              required>
-            <button type="submit">Find Food Trucks Near You!</button>
-          </form>
-
-          <div id="result" hidden>
-            <button id="new-search">New Search</button>
-            <div id="food-truck-list"></div>
-          </div> --}}
-
-          <form id="search-form2" action="/login" method="GET" class="form-container content-container">
-            <button class="signup-btn search-btn brand-font bg-dark-blue text-light-blue btn-hover" type="submit">SIGN
-              UP</button>
-          </form>
+    <div class="columns no-padding-columns">
+        <!-- Image on left -->
+        <div class="column is-half no-margin-padding">
+            <figure class="image is-1by1">
+                <img src="./images/food-truck-owner.png" alt="placeholder">
+            </figure>
         </div>
-      </div>
+        <!-- Content on the right -->
+        <div class="column is-half bg-burnt-orange">
+            <div class="content has-text-centered owner-container">
+              <div class="inner-container">
+                <h1 class="brand-font truck-owner-title">
+                  FOOD TRUCK FAME AWAITS
+                </h1>
+                <p class="subtitle truck-owner-p">
+                   Attract more customers and boost your sales by signing up with FeastFindr! Our platform showcases your food truck, making it easier for food lovers to discover and enjoy your delicious creations. Don't miss out on this opportunity to grow your business and become a go-to choice for mobile food enthusiasts in your area.
+                </p>
+
+                <form id="search-form2" action="/login" method="GET" class="form-container content-container">
+                  <button class="signup-btn search-btn brand-font bg-dark-blue text-light-blue btn-hover" type="submit">SIGN UP</button>
+                </form>
+              </div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- Testimonials section -->
@@ -85,9 +66,7 @@
           </div>
           <div class="card-content">
             <div class="content has-text-centered">
-              <p class="review-p">"FeastFindr has helped us stand out in a competitive market. The increased visibility
-                and user-friendly platform makes it simple for food lovers to discover our unique culinary creations.
-                It's been an invaluable asset to our growth!" - Peter, Gourmet Grilled Cheese Co.</p>
+              <p class="review-p">"FeastFindr has helped us stand out in a competitive market. The increased visibility and user-friendly platform makes it simple for food lovers to discover our unique culinary creations. It's been an invaluable asset to our growth!" - Peter, Gourmet Grilled Cheese Co.</p>
               <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
@@ -117,9 +96,7 @@
           </div>
           <div class="card-content">
             <div class="content has-text-centered">
-              <p class="review-p">"FeastFindr has been a game changer for our food truck. Our customer base has grown
-                significantly, and the app makes it so easy for them to find us. Highly recommended for any food truck
-                owner!" - James, Smokey BBQ Haven</p>
+              <p class="review-p">"FeastFindr has been a game changer for our food truck. Our customer base has grown significantly, and the app makes it so easy for them to find us. Highly recommended for any food truck owner!" - James, Smokey BBQ Haven</p>
               <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
@@ -149,9 +126,7 @@
           </div>
           <div class="card-content">
             <div class="content has-text-centered">
-              <p class="review-p">"Since joining FeastFindr, we've seen a surge in foot traffic and sales. The app
-                provides great exposure and helps us connect with our target audience. It's an essential tool for our
-                business!" - Laura, Tasty Tacos Express</p>
+              <p class="review-p">"Since joining FeastFindr, we've seen a surge in foot traffic and sales. The app provides great exposure and helps us connect with our target audience. It's an essential tool for our business!" - Laura, Tasty Tacos Express</p>
               <span class="icon star-color">
                 <i class="fas fa-star"></i>
               </span>
@@ -175,4 +150,3 @@
   </div>
 </section>
 <script src="/js/homepage.js"></script>
-<script src=""></script>

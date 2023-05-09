@@ -10,14 +10,8 @@ const searchFoodTruckHandler = async (event) => {
     try {
       const address = document.getElementById('address').value
       const url = `/results/${address}`
-        // const response = await fetch(`/results/?address=${address}`);
 
-      //   if (response.ok) {
           window.location.href =url; // Redirect to the results page
-      // } else {
-      //     alert('Search failed, try again!');
-      // }
-      console.log(response);
     } catch (error) {
         console.log(error);
     }

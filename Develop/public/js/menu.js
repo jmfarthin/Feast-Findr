@@ -98,7 +98,7 @@ const menuFormHandler = async (event) => {
         if (response.ok) {
             console.log(JSON.stringify(menuItems));
             // If successful, redirect the browser to the user profile page
-            // document.location.replace('/');
+            document.location.replace('/profile');
         } else {
             console.error();
         }

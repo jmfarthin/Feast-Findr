@@ -1,3 +1,5 @@
+const directionButtons = document.querySelectorAll('.directions-button');
+ 
  function attachFlipEventListeners() {
     document.querySelectorAll('.flip-tile').forEach(flipTile => {
       flipTile.addEventListener('click', () => {
@@ -7,7 +9,30 @@
     });
   }
 
- 
+  async function fetchFoodTruckData(truckId) {
+    const response = await fetch(`/search/truck/${truckId}`);
+  
+    if (!response.ok) {
+      throw new Error(`Error fetching food truck data: ${response.statusText}`);
+    }
+  
+    const data = await response.json();
+    return data.truck;
+  }
+
+  async function directionsButtonEventListener(button) {
+    const truckId = button.dataset.truckId;
+    const foodTruck = await fetchFoodTruckData(truckId);
+  
+    button.addEventListener('click', (event) => {
+      event.stopPropagation();
+      window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(foodTruck.address)}`, '_blank');
+    });
+  }
   
     // Attach event listeners
     attachFlipEventListeners();
+
+    directionButtons.forEach((button) => {
+      directionsButtonEventListener(button);
+    });
