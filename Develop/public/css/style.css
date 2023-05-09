@@ -285,3 +285,7 @@ input[type="text"]::placeholder {
 .card-header1{
     color: #D95437;
 }
+
+.custom-card {
+    background-color: #DD4533 !important;
+}
