@@ -32,7 +32,7 @@
 }
 
 .search-title {
-    margin: 0 0 4% 0;
+    margin: 15% 0 7% 0;
 }
 
 .truck-owner-title {
@@ -104,7 +104,7 @@
 
 .search-field {
     width: 200px !important;
-    padding: 1% 0;
+    padding: 1.5% 0;
     margin: 7% 0 4% 0;
     text-align: center;
 }
@@ -115,7 +115,7 @@
     border: none;
     border-radius: 25px;
     padding: 2% 0;
-    margin: 1% 0 0 0;
+    margin: 2% 0 0 0;
     cursor: pointer;
 }
 
@@ -289,5 +289,26 @@ input[type="text"]::placeholder {
 }
 
 .card-header1{
-    color: #D95437;
+    color: #00d1b2 !important;
+}
+
+.custom-card{
+    background-color: #D95437 !important;
+}
+
+.directions-button {
+    font-size: 12px !important;
+    width: 100px !important;
+    background-color: #2A4D58 !important;
+    color: #87EFD6 !important;
+    border: none;
+    border-radius: 25px;
+    padding: 0.3% 0 !important;
+    margin: 1% 0 0 0 !important;
+    cursor: pointer;
+}
+
+.directions-button:hover {
+    background-color: #E17A2C !important;
+    color: #2A4D58 !important;
 }
