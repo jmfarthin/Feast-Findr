@@ -27,11 +27,6 @@ const convertAddressToCoordinates = async (address) => {
 };
 
 
-
-const location1 = '490 Roaring fork lake rd';
-const location2 = '2240 Burton Lake Rd'
-
-
 const checkDistance = (user, truck) => {
   const distance = geolib.getDistance(user, truck);
   const mileDistance = distance * 0.000621;
