@@ -34,6 +34,23 @@ router.get('/:address', async (req, res) => {
     res.status(400).json({ error });
   }
 });
+
+router.get('/truck/:truckId', async (req, res) => {
+  try {
+    const truckId = req.params.truckId;
+    const foodTruck = await FoodTruck.findByPk(truckId, { include: [MenuItem] });
+
+    if (!foodTruck) {
+      res.status(404).json({ message: 'Food truck not found' });
+    } else {
+      res.status(200).json({ truck: foodTruck.get({ plain: true }) });
+    }
+  } catch (error) {
+    res.status(500).json({ error });
+  }
+});
+
+
 module.exports = router;
 
 
