@@ -29,20 +29,28 @@ router.get('/truck/:id', async (req, res) => {
 
 // A route to take signed in users to their profile page
 router.get('/profile', async (req, res) => {
-    const userFoodTruck = await FoodTruck.findByPk(req.session.user_id, {
-        include: [{ model: MenuItem }]
+    
+    const userFoodTruck = await FoodTruck.findOne({
+        where: {
+            owner_id: req.session.user_id
+        },
+        include: [{ model: MenuItem}],
     });
 
-    if (userFoodTruck) {
+    const foodTruck = userFoodTruck.get({ plain: true });
 
-        res.json(userFoodTruck);
 
-    } else {
-        res.status(404).json({ message: 'Food truck not found for the current user' });
-    }
+    // if (userFoodTruck) {
+
+    //     res.json(userFoodTruck);
+
+    // } else {
+    //     res.status(404).json({ message: 'Food truck not found for the current user' });
+    // }
 
     res.render("profile", {
-        ...userFoodTruck,
+        ...foodTruck,
+        logged_in: true
     })
 });
 
