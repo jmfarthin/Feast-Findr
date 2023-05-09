@@ -11,6 +11,7 @@ const truckFormHandler = async (event) => {
     const contact_info = document.querySelector('#contact').value.trim();
     const social_media_links = document.querySelector('#link').value.trim();
     const owner_id = document.getElementById('truck-form').getAttribute('data-session');
+    const address = document.getElementById('address').value.trim();
     // const address = document.querySelector('#address').value.trim();
 
     const newTruck = {
@@ -23,13 +24,13 @@ const truckFormHandler = async (event) => {
         social_media_links: { website: social_media_links }
     };
 
-    if (name && cuisine && description && contact_info) {
+    if (name && cuisine && description && contact_info && address) {
         // Send a POST request to the API endpoint
         try {
             console.log(JSON.stringify(newTruck));
             const response = await fetch('/api/foodTruck', {
                 method: 'POST',
-                body: JSON.stringify( newTruck ),
+                body: JSON.stringify(newTruck),
                 headers: { 'Content-Type': 'application/json' },
             });
 
