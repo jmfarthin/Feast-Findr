@@ -1,15 +1,20 @@
 <body class="user-body">
     <section class="section">
         <div class="container">
+            {{#if trucks}}
             <h1 class="title has-text-centered results-title">Your Flavor is Found!</h1>
             <div class="tile is-ancestor is-flex-wrap-wrap">
                 {{#each trucks as |truck|}}
                 {{>tiles}}
                 {{/each}}
             </div>
+            {{else}}
+            <h1 class="title has-text-centered results-title">I'm sorry, there are no trucks in your area!</h1>
+            <a href="/" class="menu-button brand-font is-centered">Try again</a>
+            {{/if}}
         </div>
     </section>
-    
+
 </body>
 
 </html>
