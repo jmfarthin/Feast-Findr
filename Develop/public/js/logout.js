@@ -8,6 +8,7 @@ const logout = async () => {
       document.location.replace('/');
     } else {
       alert(response.statusText);
+      document.location.replace('/');
     }
   };
   

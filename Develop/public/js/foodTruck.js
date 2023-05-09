@@ -21,7 +21,8 @@ const truckFormHandler = async (event) => {
         description: description,
         image: image,
         contact_info: contact_info,
-        social_media_links: { website: social_media_links }
+        social_media_links: { website: social_media_links },
+        address: address
     };
 
     if (name && cuisine && description && contact_info && address) {

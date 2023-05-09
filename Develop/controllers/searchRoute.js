@@ -33,7 +33,10 @@ router.get('/:address', async (req, res) => {
       console.log(plainTrucks);
 
       // res.status(200).json({ trucks: plainTrucks });
-      res.render('results', { trucks: plainTrucks });
+      res.render('results', { 
+        trucks: plainTrucks,
+        logged_in: req.session.logged_in, 
+      });
     }
   } catch (error) {
     res.status(400).json({ error });
