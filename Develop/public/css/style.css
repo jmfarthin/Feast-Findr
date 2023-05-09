@@ -25,6 +25,12 @@
     font-family: 'Secular One', sans-serif;
 }
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+}
+
 .search-title {
     margin: 0 0 4% 0;
 }
@@ -178,7 +184,7 @@ input[type="text"]::placeholder {
 }
 
 .inner-container {
-    width: 60%;
+    width: 100%;
 }
 
 .card {
