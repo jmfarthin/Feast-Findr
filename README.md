@@ -18,9 +18,7 @@ Normally finding these trucks is left to chance, with Feast-Finder you know what
 Making this app taught us how complex the most simple app features can be to design, as well as how rewarding it is to make something that we
 would definitely use ourselves!
 
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents
 
 - [Usage](#usage)
 - [Credits](#credits)
